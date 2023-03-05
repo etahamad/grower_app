@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1044237359353-op4dgja2g8j5moe6hfol2nl86l0hjp3d.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1044237359353-op4dgja2g8j5moe6hfol2nl86l0hjp3d</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1044237359353-0le96tju4omtgnu4ck8jssok6u67cg3o.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCR4lcoHx4MDKjP7jNVtIZYZ5TS08ps1Sc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1044237359353</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Robin.Do</string>
+	<key>PROJECT_ID</key>
+	<string>agri-adiutor</string>
+	<key>STORAGE_BUCKET</key>
+	<string>agri-adiutor.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1044237359353:ios:d6674c29009cb6dba0ea28</string>
+</dict>
+</plist>
