@@ -126,8 +126,8 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'MyProfile': MyProfileWidget(),
       'Camera': CameraWidget(),
+      'MyProfile': MyProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
@@ -147,18 +147,6 @@ class _NavBarPageState extends State<NavBarPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person_outline,
-              size: 32.0,
-            ),
-            activeIcon: Icon(
-              Icons.person_sharp,
-              size: 32.0,
-            ),
-            label: 'My Profile',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.camera_alt_outlined,
               size: 24.0,
             ),
@@ -166,7 +154,19 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.camera_alt,
               size: 24.0,
             ),
-            label: 'Main Camera',
+            label: 'Camera',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outline,
+              size: 32.0,
+            ),
+            activeIcon: Icon(
+              Icons.person_sharp,
+              size: 32.0,
+            ),
+            label: 'You',
             tooltip: '',
           )
         ],
