@@ -6,5 +6,3 @@ export '/my_profile/my_profile_widget.dart' show MyProfileWidget;
 export '/change_password/change_password_widget.dart' show ChangePasswordWidget;
 export '/login_page/login_page_widget.dart' show LoginPageWidget;
 export '/camera/camera_widget.dart' show CameraWidget;
-export '/camera_copy/camera_copy_widget.dart' show CameraCopyWidget;
-export '/camera_copy2/camera_copy2_widget.dart' show CameraCopy2Widget;
