@@ -305,7 +305,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                     getJsonField(
                       (_model.apiResultqbw?.jsonBody ?? ''),
                       r'''$..label''',
-                    )[0].toString(),
+                    )?.first?.toString() ?? '',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Outfit',
                           fontSize: 18.0,
