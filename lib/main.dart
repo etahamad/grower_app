@@ -88,12 +88,9 @@ class _MyAppState extends State<MyApp> {
           ? Builder(
               builder: (context) => Container(
                 color: Colors.transparent,
-                child: Center(
-                  child: Image.asset(
-                    'assets/images/todo_0.0_Splash@3x.png',
-                    width: MediaQuery.of(context).size.width * 1.0,
-                    fit: BoxFit.fitWidth,
-                  ),
+                child: Image.asset(
+                  'assets/images/bg_3.jpg',
+                  fit: BoxFit.fill,
                 ),
               ),
             )
@@ -131,8 +128,6 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'MyProfile': MyProfileWidget(),
       'Camera': CameraWidget(),
-      'CameraCopy': CameraCopyWidget(),
-      'CameraCopy2': CameraCopy2Widget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
@@ -172,30 +167,6 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: 'Main Camera',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.camera_alt_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.camera_alt,
-              size: 24.0,
-            ),
-            label: 'Camera',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.camera_alt_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.camera_alt,
-              size: 24.0,
-            ),
-            label: 'Camera',
             tooltip: '',
           )
         ],

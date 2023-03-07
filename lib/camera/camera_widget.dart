@@ -169,95 +169,96 @@ class _CameraWidgetState extends State<CameraWidget> {
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
-                    child: InkWell(
-                      onTap: () async {
-                        final selectedMedia =
-                            await selectMediaWithSourceBottomSheet(
-                          context: context,
-                          allowPhoto: true,
-                          pickerFontFamily: 'Gamja Flower',
-                        );
-                        if (selectedMedia != null &&
-                            selectedMedia.every((m) =>
-                                validateFileFormat(m.storagePath, context))) {
-                          setState(() => _model.isMediaUploading = true);
-                          var selectedUploadedFiles = <FFUploadedFile>[];
-                          var downloadUrls = <String>[];
-                          try {
-                            selectedUploadedFiles = selectedMedia
-                                .map((m) => FFUploadedFile(
-                                      name: m.storagePath.split('/').last,
-                                      bytes: m.bytes,
-                                      height: m.dimensions?.height,
-                                      width: m.dimensions?.width,
-                                    ))
-                                .toList();
-
-                            downloadUrls = (await Future.wait(
-                              selectedMedia.map(
-                                (m) async =>
-                                    await uploadData(m.storagePath, m.bytes),
-                              ),
-                            ))
-                                .where((u) => u != null)
-                                .map((u) => u!)
-                                .toList();
-                          } finally {
-                            _model.isMediaUploading = false;
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          15.0, 15.0, 15.0, 15.0),
+                      child: InkWell(
+                        onTap: () async {
+                          final selectedMedia =
+                              await selectMediaWithSourceBottomSheet(
+                            context: context,
+                            allowPhoto: true,
+                            pickerFontFamily: 'Gamja Flower',
+                          );
+                          if (selectedMedia != null &&
+                              selectedMedia.every((m) =>
+                                  validateFileFormat(m.storagePath, context))) {
+                            setState(() => _model.isMediaUploading = true);
+                            var selectedUploadedFiles = <FFUploadedFile>[];
+                            var downloadUrls = <String>[];
+                            try {
+                              selectedUploadedFiles = selectedMedia
+                                  .map((m) => FFUploadedFile(
+                                        name: m.storagePath.split('/').last,
+                                        bytes: m.bytes,
+                                        height: m.dimensions?.height,
+                                        width: m.dimensions?.width,
+                                      ))
+                                  .toList();
+                              downloadUrls = (await Future.wait(
+                                selectedMedia.map(
+                                  (m) async =>
+                                      await uploadData(m.storagePath, m.bytes),
+                                ),
+                              ))
+                                  .where((u) => u != null)
+                                  .map((u) => u!)
+                                  .toList();
+                            } finally {
+                              _model.isMediaUploading = false;
+                            }
+                            if (selectedUploadedFiles.length ==
+                                    selectedMedia.length &&
+                                downloadUrls.length == selectedMedia.length) {
+                              setState(() {
+                                _model.uploadedLocalFile =
+                                    selectedUploadedFiles.first;
+                                _model.uploadedFileUrl = downloadUrls.first;
+                              });
+                            } else {
+                              setState(() {});
+                              return;
+                            }
                           }
-                          if (selectedUploadedFiles.length ==
-                                  selectedMedia.length &&
-                              downloadUrls.length == selectedMedia.length) {
-                            setState(() {
-                              _model.uploadedLocalFile =
-                                  selectedUploadedFiles.first;
-                              _model.uploadedFileUrl = downloadUrls.first;
-                            });
-                          } else {
-                            setState(() {});
-                            return;
-                          }
-                        }
-                      },
-                      child: Container(
-                        width: 365.4,
-                        height: 283.1,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: Image.asset(
-                              'assets/images/imgUploadAsset.jpg',
-                            ).image,
-                          ),
-                          borderRadius: BorderRadius.circular(25.0),
-                          shape: BoxShape.rectangle,
-                        ),
-                        child: Visibility(
-                          visible: functions
-                                  .hasUploadedMedia(_model.uploadedFileUrl) ??
-                              true,
-                          child: FlutterFlowMediaDisplay(
-                            path: _model.uploadedFileUrl,
-                            imageBuilder: (path) => Image.network(
-                              path,
-                              width: 300.0,
-                              height: 300.0,
+                        },
+                        child: Container(
+                          width: 365.4,
+                          height: 283.1,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            image: DecorationImage(
                               fit: BoxFit.cover,
+                              image: Image.asset(
+                                'assets/images/imgUploadAsset.jpg',
+                              ).image,
                             ),
-                            videoPlayerBuilder: (path) =>
-                                FlutterFlowVideoPlayer(
-                              path: path,
-                              width: 300.0,
-                              autoPlay: false,
-                              looping: true,
-                              showControls: true,
-                              allowFullScreen: true,
-                              allowPlaybackSpeedMenu: false,
+                            borderRadius: BorderRadius.circular(25.0),
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Visibility(
+                            visible: functions
+                                    .hasUploadedMedia(_model.uploadedFileUrl) ??
+                                true,
+                            child: FlutterFlowMediaDisplay(
+                              path: _model.uploadedFileUrl,
+                              imageBuilder: (path) => Image.network(
+                                path,
+                                width: 300.0,
+                                height: 300.0,
+                                fit: BoxFit.cover,
+                              ),
+                              videoPlayerBuilder: (path) =>
+                                  FlutterFlowVideoPlayer(
+                                path: path,
+                                width: 300.0,
+                                autoPlay: false,
+                                looping: true,
+                                showControls: true,
+                                allowFullScreen: true,
+                                allowPlaybackSpeedMenu: false,
+                              ),
                             ),
                           ),
                         ),
