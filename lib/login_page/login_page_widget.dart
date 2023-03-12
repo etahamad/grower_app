@@ -100,6 +100,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       color: Colors.black,
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText1Family),
                                     ),
                                 hintText: 'Enter your email here...',
                                 enabledBorder: OutlineInputBorder(
@@ -140,6 +144,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     color: FlutterFlowTheme.of(context).white,
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
                                   ),
                               keyboardType: TextInputType.emailAddress,
                               validator: _model.loginEmailControllerValidator
@@ -161,6 +169,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       color: Colors.black,
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText1Family),
                                     ),
                                 hintText: 'Enter your password here...',
                                 enabledBorder: OutlineInputBorder(
@@ -215,6 +227,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     color: FlutterFlowTheme.of(context).white,
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
                                   ),
                               validator: _model.loginPasswordControllerValidator
                                   .asValidator(context),
@@ -238,7 +254,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) =>
-                                        NavBarPage(initialPage: 'MyProfile'),
+                                        NavBarPage(initialPage: 'plantdetails'),
                                   ),
                                 );
                               },
@@ -258,6 +274,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       color: Colors.white,
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .subtitle2Family),
                                     ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(
@@ -298,6 +318,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           color: Colors.black,
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1Family),
                                         ),
                                   ),
                                 ),
@@ -337,6 +361,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                               color: Colors.white,
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.bold,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .subtitle2Family),
                                             ),
                                         elevation: 0.0,
                                         borderSide: BorderSide(

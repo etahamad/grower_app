@@ -51,7 +51,7 @@ class _CameraWidgetState extends State<CameraWidget> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100.0),
         child: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryColor,
+          backgroundColor: Color(0xFF008037),
           automaticallyImplyLeading: false,
           actions: [],
           flexibleSpace: FlexibleSpaceBar(
@@ -77,7 +77,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                             buttonSize: 50.0,
                             icon: Icon(
                               Icons.arrow_back_rounded,
-                              color: Colors.white,
+                              color: Color(0xFFA8CF45),
                               size: 30.0,
                             ),
                             onPressed: () async {
@@ -97,9 +97,13 @@ class _CameraWidgetState extends State<CameraWidget> {
                           child: Text(
                             'Back',
                             style: FlutterFlowTheme.of(context).title2.override(
-                                  fontFamily: 'Outfit',
+                                  fontFamily:
+                                      FlutterFlowTheme.of(context).title2Family,
                                   color: Colors.white,
                                   fontSize: 16.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .title2Family),
                                 ),
                           ),
                         ),
@@ -112,9 +116,12 @@ class _CameraWidgetState extends State<CameraWidget> {
                     child: Text(
                       'Camera',
                       style: FlutterFlowTheme.of(context).title2.override(
-                            fontFamily: 'Outfit',
+                            fontFamily:
+                                FlutterFlowTheme.of(context).title2Family,
                             color: Colors.white,
                             fontSize: 22.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).title2Family),
                           ),
                     ),
                   ),
@@ -133,23 +140,6 @@ class _CameraWidgetState extends State<CameraWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 24.0, 0.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Text(
-                      'Api',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily: 'Lexend Deca',
-                            color: Color(0xFF95A1AC),
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.normal,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 24.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -157,10 +147,12 @@ class _CameraWidgetState extends State<CameraWidget> {
                     Text(
                       'Upload image',
                       style: FlutterFlowTheme.of(context).title1.override(
-                            fontFamily: 'Lexend Deca',
-                            color: Color(0xFF090F13),
-                            fontSize: 24.0,
+                            fontFamily: 'Gamja Flower',
+                            color: Colors.black,
+                            fontSize: 30.0,
                             fontWeight: FontWeight.bold,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).title1Family),
                           ),
                     ),
                   ],
@@ -172,7 +164,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                   Expanded(
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(
-                          15.0, 15.0, 15.0, 15.0),
+                          15.0, 60.0, 15.0, 15.0),
                       child: InkWell(
                         onTap: () async {
                           final selectedMedia =
@@ -223,19 +215,21 @@ class _CameraWidgetState extends State<CameraWidget> {
                           }
                         },
                         child: Container(
-                          width: 365.4,
-                          height: 283.1,
+                          width: 368.0,
+                          height: 286.0,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
+                            color: Color(0xFF008037),
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: Image.asset(
-                                'assets/images/imgUploadAsset.jpg',
+                                'assets/images/logocam.png',
                               ).image,
                             ),
                             borderRadius: BorderRadius.circular(25.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color: Color(0xFF008037),
+                            ),
                           ),
                           child: Visibility(
                             visible: functions
@@ -280,10 +274,14 @@ class _CameraWidgetState extends State<CameraWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: FlutterFlowTheme.of(context).primaryColor,
+                  color: Color(0xFF008037),
                   textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                        fontFamily: 'Outfit',
+                        fontFamily: 'Gamja Flower',
                         color: Colors.white,
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.bold,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).subtitle2Family),
                       ),
                   borderSide: BorderSide(
                     color: Colors.transparent,
@@ -293,7 +291,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                 ),
               ),
               Container(
-                width: 375.7,
+                width: 376.0,
                 height: 100.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -304,8 +302,9 @@ class _CameraWidgetState extends State<CameraWidget> {
                   child: Text(
                     getJsonField(
                       (_model.apiResultqbw?.jsonBody ?? ''),
-                      r'''$..label''',
+                      r'''$.data''',
                     )?.first?.toString() ?? '',
+                    textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Outfit',
                           fontSize: 18.0,

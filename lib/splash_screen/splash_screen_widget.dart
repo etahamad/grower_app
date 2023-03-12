@@ -215,6 +215,10 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                               .white,
                                           fontSize: 25.0,
                                           fontWeight: FontWeight.bold,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .subtitle2Family),
                                         ),
                                     elevation: 3.0,
                                     borderSide: BorderSide(
@@ -252,6 +256,10 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                       color: FlutterFlowTheme.of(context).white,
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .subtitle2Family),
                                     ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(

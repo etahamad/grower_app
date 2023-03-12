@@ -16,7 +16,7 @@ class PlantImageAPICall {
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'plantImageAPI',
-      apiUrl: 'https://etahamad-plant-disease-detection.hf.space/run/predict',
+      apiUrl: 'https://etahamad-new-plant-disease-detection.hf.space/run/predict',
       callType: ApiCallType.POST,
       headers: {
         'Content-Type': 'application/json',
