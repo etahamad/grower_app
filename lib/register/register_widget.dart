@@ -99,6 +99,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                     color: Colors.black,
                                     fontSize: 25.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
                                   ),
                               hintText: 'Enter your name here...',
                               enabledBorder: OutlineInputBorder(
@@ -132,13 +136,17 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                               filled: true,
                               fillColor: Color(0xFF008037),
                             ),
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Gamja Flower',
-                                      color: FlutterFlowTheme.of(context).white,
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText1
+                                .override(
+                                  fontFamily: 'Gamja Flower',
+                                  color: FlutterFlowTheme.of(context).white,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyText1Family),
+                                ),
                             keyboardType: TextInputType.emailAddress,
                             validator: _model.signupNameControllerValidator
                                 .asValidator(context),
@@ -158,6 +166,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       color: Colors.black,
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText1Family),
                                     ),
                                 hintText: 'Enter your email here...',
                                 enabledBorder: OutlineInputBorder(
@@ -198,6 +210,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                     color: FlutterFlowTheme.of(context).white,
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
                                   ),
                               keyboardType: TextInputType.emailAddress,
                               validator: _model.signupEmailControllerValidator
@@ -219,6 +235,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       color: Colors.black,
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText1Family),
                                     ),
                                 hintText: 'Enter your password here...',
                                 enabledBorder: OutlineInputBorder(
@@ -273,6 +293,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                     color: FlutterFlowTheme.of(context).white,
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
                                   ),
                               validator: _model
                                   .signupPasswordControllerValidator
@@ -296,6 +320,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       color: Colors.black,
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText1Family),
                                     ),
                                 hintText: 'Confirm password here...',
                                 enabledBorder: OutlineInputBorder(
@@ -351,6 +379,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                     color: FlutterFlowTheme.of(context).white,
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
                                   ),
                               validator: _model
                                   .signupPasswordConfirmControllerValidator
@@ -411,6 +443,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       color: Colors.white,
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .subtitle2Family),
                                     ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(
@@ -451,6 +487,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                           color: Colors.black,
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1Family),
                                         ),
                                   ),
                                 ),
@@ -490,6 +530,12 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                               color: Colors.white,
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.bold,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .subtitle2Family),
                                             ),
                                         elevation: 0.0,
                                         borderSide: BorderSide(

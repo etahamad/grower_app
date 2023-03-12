@@ -56,6 +56,8 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                 color: FlutterFlowTheme.of(context).white,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
+                useGoogleFonts: GoogleFonts.asMap()
+                    .containsKey(FlutterFlowTheme.of(context).title2Family),
               ),
         ),
         actions: [],
@@ -94,6 +96,8 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                             color: Color(0xFF0F1113),
                             fontSize: 24.0,
                             fontWeight: FontWeight.w500,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).title2Family),
                           ),
                     ),
                   ),
@@ -151,6 +155,10 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText2Family),
                                       ),
                                 ),
                               ),
@@ -206,6 +214,10 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText2Family),
                                       ),
                                 ),
                               ),
@@ -261,6 +273,10 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText2Family),
                                       ),
                                 ),
                               ),
@@ -316,6 +332,10 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText2Family),
                                       ),
                                 ),
                               ),

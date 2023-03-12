@@ -94,9 +94,13 @@ class _CameraWidgetState extends State<CameraWidget> {
                           child: Text(
                             'Back',
                             style: FlutterFlowTheme.of(context).title2.override(
-                                  fontFamily: 'Outfit',
+                                  fontFamily:
+                                      FlutterFlowTheme.of(context).title2Family,
                                   color: Colors.white,
                                   fontSize: 16.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .title2Family),
                                 ),
                           ),
                         ),
@@ -109,9 +113,12 @@ class _CameraWidgetState extends State<CameraWidget> {
                     child: Text(
                       'Camera',
                       style: FlutterFlowTheme.of(context).title2.override(
-                            fontFamily: 'Outfit',
+                            fontFamily:
+                                FlutterFlowTheme.of(context).title2Family,
                             color: Colors.white,
                             fontSize: 22.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).title2Family),
                           ),
                     ),
                   ),
@@ -141,6 +148,8 @@ class _CameraWidgetState extends State<CameraWidget> {
                             color: Colors.black,
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).title1Family),
                           ),
                     ),
                   ],
@@ -269,6 +278,8 @@ class _CameraWidgetState extends State<CameraWidget> {
                         color: Colors.white,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).subtitle2Family),
                       ),
                   borderSide: BorderSide(
                     color: Colors.transparent,
@@ -297,6 +308,8 @@ class _CameraWidgetState extends State<CameraWidget> {
                           color: Colors.black,
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyText1Family),
                         ),
                   ),
                 ),

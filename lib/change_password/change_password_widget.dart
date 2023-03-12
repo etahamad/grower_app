@@ -137,6 +137,10 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                     color: Colors.black,
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText2Family),
                                   ),
                             ),
                           ),
@@ -155,6 +159,10 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                       color: Colors.black,
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText2Family),
                                     ),
                                 hintText:
                                     'We will send a link to your email...',
@@ -165,6 +173,10 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                       color: FlutterFlowTheme.of(context).white,
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText2Family),
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -207,6 +219,10 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                     fontFamily: 'Gamja Flower',
                                     color: FlutterFlowTheme.of(context).white,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
                                   ),
                               keyboardType: TextInputType.emailAddress,
                               validator: _model.emailTextControllerValidator
@@ -261,6 +277,10 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                                 .white,
                                             fontSize: 25.0,
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .subtitle1Family),
                                           ),
                                       elevation: 3.0,
                                       borderSide: BorderSide(
