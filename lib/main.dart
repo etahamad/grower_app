@@ -126,6 +126,7 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
+      'plantdetails': PlantdetailsWidget(),
       'Camera': CameraWidget(),
       'MyProfile': MyProfileWidget(),
     };
@@ -138,13 +139,25 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: FlutterFlowTheme.of(context).primaryBlack,
-        selectedItemColor: FlutterFlowTheme.of(context).primaryColor,
-        unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
+        backgroundColor: Color(0xFF008037),
+        selectedItemColor: Color(0xFFA8CF45),
+        unselectedItemColor: FlutterFlowTheme.of(context).white,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_outlined,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.home,
+              size: 24.0,
+            ),
+            label: 'Home',
+            tooltip: '',
+          ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.camera_alt_outlined,
@@ -160,11 +173,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person_outline,
-              size: 32.0,
+              size: 24.0,
             ),
             activeIcon: Icon(
               Icons.person_sharp,
-              size: 32.0,
+              size: 24.0,
             ),
             label: 'You',
             tooltip: '',

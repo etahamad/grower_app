@@ -21,7 +21,7 @@ class CameraModel extends FlutterFlowModel {
       FFUploadedFile(bytes: Uint8List.fromList([]));
   String uploadedFileUrl = '';
 
-  // Stores action output result for [Backend Call - API (plantImageAPI)] action in StartCar widget.
+  // Stores action output result for [Backend Call - API (plantImageAPI)] action in CallApi widget.
   ApiCallResponse? apiResultqbw;
 
   /// Initialization and disposal methods.

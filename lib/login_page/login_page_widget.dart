@@ -238,7 +238,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) =>
-                                        NavBarPage(initialPage: 'MyProfile'),
+                                        NavBarPage(initialPage: 'plantdetails'),
                                   ),
                                 );
                               },
