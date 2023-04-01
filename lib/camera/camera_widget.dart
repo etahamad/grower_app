@@ -6,7 +6,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/upload_media.dart';
+import '/flutter_flow/upload_data.dart';
 import '/main.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
@@ -93,14 +93,16 @@ class _CameraWidgetState extends State<CameraWidget> {
                               4.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Back',
-                            style: FlutterFlowTheme.of(context).title2.override(
-                                  fontFamily:
-                                      FlutterFlowTheme.of(context).title2Family,
+                            style: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .headlineMediumFamily,
                                   color: Colors.white,
                                   fontSize: 16.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
-                                          .title2Family),
+                                          .headlineMediumFamily),
                                 ),
                           ),
                         ),
@@ -112,14 +114,16 @@ class _CameraWidgetState extends State<CameraWidget> {
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
                       'Camera',
-                      style: FlutterFlowTheme.of(context).title2.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).title2Family,
-                            color: Colors.white,
-                            fontSize: 22.0,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).title2Family),
-                          ),
+                      style:
+                          FlutterFlowTheme.of(context).headlineMedium.override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .headlineMediumFamily,
+                                color: Colors.white,
+                                fontSize: 22.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineMediumFamily),
+                              ),
                     ),
                   ),
                 ],
@@ -143,13 +147,14 @@ class _CameraWidgetState extends State<CameraWidget> {
                   children: [
                     Text(
                       'Upload image',
-                      style: FlutterFlowTheme.of(context).title1.override(
+                      style: FlutterFlowTheme.of(context).displaySmall.override(
                             fontFamily: 'Gamja Flower',
                             color: Colors.black,
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).title1Family),
+                                FlutterFlowTheme.of(context)
+                                    .displaySmallFamily),
                           ),
                     ),
                   ],
@@ -173,7 +178,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                           if (selectedMedia != null &&
                               selectedMedia.every((m) =>
                                   validateFileFormat(m.storagePath, context))) {
-                            setState(() => _model.isMediaUploading = true);
+                            setState(() => _model.isDataUploading = true);
                             var selectedUploadedFiles = <FFUploadedFile>[];
                             var downloadUrls = <String>[];
                             try {
@@ -196,7 +201,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                                   .map((u) => u!)
                                   .toList();
                             } finally {
-                              _model.isMediaUploading = false;
+                              _model.isDataUploading = false;
                             }
                             if (selectedUploadedFiles.length ==
                                     selectedMedia.length &&
@@ -273,14 +278,15 @@ class _CameraWidgetState extends State<CameraWidget> {
                   iconPadding:
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: Color(0xFF008037),
-                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Gamja Flower',
                         color: Colors.white,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(
-                            FlutterFlowTheme.of(context).subtitle2Family),
+                            FlutterFlowTheme.of(context).titleSmallFamily),
                       ),
+                  elevation: 2.0,
                   borderSide: BorderSide(
                     color: Colors.transparent,
                     width: 1.0,
@@ -303,13 +309,13 @@ class _CameraWidgetState extends State<CameraWidget> {
                       r'''$..label''',
                     ).toString(),
                     textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Gamja Flower',
                           color: Colors.black,
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyText1Family),
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
                 ),

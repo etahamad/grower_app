@@ -94,7 +94,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               decoration: InputDecoration(
                                 labelText: 'Email Address',
                                 labelStyle: FlutterFlowTheme.of(context)
-                                    .bodyText1
+                                    .bodyMedium
                                     .override(
                                       fontFamily: 'Gamja Flower',
                                       color: Colors.black,
@@ -103,7 +103,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText1Family),
+                                                  .bodyMediumFamily),
                                     ),
                                 hintText: 'Enter your email here...',
                                 enabledBorder: OutlineInputBorder(
@@ -138,7 +138,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 fillColor: Color(0xFF008037),
                               ),
                               style: FlutterFlowTheme.of(context)
-                                  .bodyText1
+                                  .bodyMedium
                                   .override(
                                     fontFamily: 'Gamja Flower',
                                     color: FlutterFlowTheme.of(context).white,
@@ -147,7 +147,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
-                                                .bodyText1Family),
+                                                .bodyMediumFamily),
                                   ),
                               keyboardType: TextInputType.emailAddress,
                               validator: _model.loginEmailControllerValidator
@@ -163,7 +163,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               decoration: InputDecoration(
                                 labelText: 'Password',
                                 labelStyle: FlutterFlowTheme.of(context)
-                                    .bodyText1
+                                    .bodyMedium
                                     .override(
                                       fontFamily: 'Gamja Flower',
                                       color: Colors.black,
@@ -172,7 +172,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText1Family),
+                                                  .bodyMediumFamily),
                                     ),
                                 hintText: 'Enter your password here...',
                                 enabledBorder: OutlineInputBorder(
@@ -221,7 +221,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 ),
                               ),
                               style: FlutterFlowTheme.of(context)
-                                  .bodyText1
+                                  .bodyMedium
                                   .override(
                                     fontFamily: 'Gamja Flower',
                                     color: FlutterFlowTheme.of(context).white,
@@ -230,7 +230,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
-                                                .bodyText1Family),
+                                                .bodyMediumFamily),
                                   ),
                               validator: _model.loginPasswordControllerValidator
                                   .asValidator(context),
@@ -268,7 +268,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Color(0xFF008037),
                                 textStyle: FlutterFlowTheme.of(context)
-                                    .subtitle2
+                                    .titleSmall
                                     .override(
                                       fontFamily: 'Gamja Flower',
                                       color: Colors.white,
@@ -277,7 +277,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .subtitle2Family),
+                                                  .titleSmallFamily),
                                     ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(
@@ -312,7 +312,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     'have an account ? ',
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
-                                        .bodyText1
+                                        .bodyMedium
                                         .override(
                                           fontFamily: 'Gamja Flower',
                                           color: Colors.black,
@@ -321,7 +321,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText1Family),
+                                                      .bodyMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -355,18 +355,18 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: Color(0xFF008037),
                                         textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
+                                            .titleSmall
                                             .override(
                                               fontFamily: 'Gamja Flower',
                                               color: Colors.white,
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.bold,
-                                              useGoogleFonts:
-                                                  GoogleFonts.asMap()
-                                                      .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .subtitle2Family),
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmallFamily),
                                             ),
                                         elevation: 0.0,
                                         borderSide: BorderSide(

@@ -57,7 +57,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               width: 50.0,
               height: 50.0,
               child: CircularProgressIndicator(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
               ),
             ),
           );
@@ -91,11 +91,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
             ),
             title: Text(
               'Edit Profile',
-              style: FlutterFlowTheme.of(context).title2.override(
+              style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Gamja Flower',
                     fontSize: 35.0,
-                    useGoogleFonts: GoogleFonts.asMap()
-                        .containsKey(FlutterFlowTheme.of(context).title2Family),
+                    useGoogleFonts: GoogleFonts.asMap().containsKey(
+                        FlutterFlowTheme.of(context).headlineMediumFamily),
                   ),
             ),
             actions: [],
@@ -140,8 +140,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 width: 50.0,
                                 height: 50.0,
                                 child: CircularProgressIndicator(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: FlutterFlowTheme.of(context).primary,
                                 ),
                               ),
                             );
@@ -158,7 +157,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 child: Text(
                                   'Update Account Information',
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyText2
+                                      .bodySmall
                                       .override(
                                         fontFamily: 'Gamja Flower',
                                         color: Colors.black,
@@ -167,7 +166,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family),
+                                                    .bodySmallFamily),
                                       ),
                                 ),
                               ),
@@ -183,7 +182,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   decoration: InputDecoration(
                                     labelText: 'Full Name',
                                     labelStyle: FlutterFlowTheme.of(context)
-                                        .subtitle2
+                                        .titleSmall
                                         .override(
                                           fontFamily: 'Gamja Flower',
                                           color: Colors.black,
@@ -192,11 +191,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .subtitle2Family),
+                                                      .titleSmallFamily),
                                         ),
                                     hintText: 'Please enter your full name...',
                                     hintStyle: FlutterFlowTheme.of(context)
-                                        .subtitle2
+                                        .titleSmall
                                         .override(
                                           fontFamily: 'Gamja Flower',
                                           color: FlutterFlowTheme.of(context)
@@ -206,7 +205,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .subtitle2Family),
+                                                      .titleSmallFamily),
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -244,7 +243,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     ),
                                   ),
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyText1
+                                      .bodyMedium
                                       .override(
                                         fontFamily: 'Gamja Flower',
                                         color:
@@ -254,7 +253,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText1Family),
+                                                    .bodyMediumFamily),
                                       ),
                                   validator: _model.textController1Validator
                                       .asValidator(context),
@@ -272,7 +271,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   decoration: InputDecoration(
                                     labelText: 'Email Address',
                                     labelStyle: FlutterFlowTheme.of(context)
-                                        .subtitle2
+                                        .titleSmall
                                         .override(
                                           fontFamily: 'Gamja Flower',
                                           color: Colors.black,
@@ -281,15 +280,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .subtitle2Family),
+                                                      .titleSmallFamily),
                                         ),
                                     hintText: 'Your email...',
                                     hintStyle: FlutterFlowTheme.of(context)
-                                        .bodyText1
+                                        .bodyMedium
                                         .override(
                                           fontFamily:
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText1Family,
+                                                  .bodyMediumFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .white,
                                           fontSize: 18.0,
@@ -297,7 +296,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText1Family),
+                                                      .bodyMediumFamily),
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -335,10 +334,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     ),
                                   ),
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyText1
+                                      .bodyMedium
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyText1Family,
+                                            .bodyMediumFamily,
                                         color:
                                             FlutterFlowTheme.of(context).white,
                                         fontSize: 18.0,
@@ -346,7 +345,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText1Family),
+                                                    .bodyMediumFamily),
                                       ),
                                   keyboardType: TextInputType.emailAddress,
                                   validator: _model.textController2Validator
@@ -388,7 +387,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           color: Color(0xFF008037),
                                           textStyle: FlutterFlowTheme.of(
                                                   context)
-                                              .subtitle1
+                                              .titleMedium
                                               .override(
                                                 fontFamily: 'Gamja Flower',
                                                 color:
@@ -401,7 +400,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                     .containsKey(
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .subtitle1Family),
+                                                            .titleMediumFamily),
                                               ),
                                           elevation: 3.0,
                                           borderSide: BorderSide(

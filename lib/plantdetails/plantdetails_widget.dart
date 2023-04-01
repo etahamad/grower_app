@@ -51,13 +51,13 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
         ),
         title: Text(
           'plants details',
-          style: FlutterFlowTheme.of(context).title2.override(
+          style: FlutterFlowTheme.of(context).headlineMedium.override(
                 fontFamily: 'Gamja Flower',
                 color: FlutterFlowTheme.of(context).white,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
-                useGoogleFonts: GoogleFonts.asMap()
-                    .containsKey(FlutterFlowTheme.of(context).title2Family),
+                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                    FlutterFlowTheme.of(context).headlineMediumFamily),
               ),
         ),
         actions: [],
@@ -91,14 +91,16 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                   Expanded(
                     child: Text(
                       'pick a plant ',
-                      style: FlutterFlowTheme.of(context).title2.override(
-                            fontFamily: 'Outfit',
-                            color: Color(0xFF0F1113),
-                            fontSize: 24.0,
-                            fontWeight: FontWeight.w500,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).title2Family),
-                          ),
+                      style:
+                          FlutterFlowTheme.of(context).headlineMedium.override(
+                                fontFamily: 'Outfit',
+                                color: Color(0xFF0F1113),
+                                fontSize: 24.0,
+                                fontWeight: FontWeight.w500,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineMediumFamily),
+                              ),
                     ),
                   ),
                 ],
@@ -149,7 +151,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                   'tomato',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyText2
+                                      .bodySmall
                                       .override(
                                         fontFamily: 'Gamja Flower',
                                         color: Color(0xFF57636C),
@@ -158,7 +160,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family),
+                                                    .bodySmallFamily),
                                       ),
                                 ),
                               ),
@@ -208,7 +210,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                   'corn',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyText2
+                                      .bodySmall
                                       .override(
                                         fontFamily: 'Lexend Deca',
                                         color: Color(0xFF57636C),
@@ -217,7 +219,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family),
+                                                    .bodySmallFamily),
                                       ),
                                 ),
                               ),
@@ -267,7 +269,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                   'mint',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyText2
+                                      .bodySmall
                                       .override(
                                         fontFamily: 'Lexend Deca',
                                         color: Color(0xFF57636C),
@@ -276,7 +278,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family),
+                                                    .bodySmallFamily),
                                       ),
                                 ),
                               ),
@@ -326,7 +328,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                   'lime',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyText2
+                                      .bodySmall
                                       .override(
                                         fontFamily: 'Lexend Deca',
                                         color: Color(0xFF57636C),
@@ -335,7 +337,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family),
+                                                    .bodySmallFamily),
                                       ),
                                 ),
                               ),
@@ -350,7 +352,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
             ),
             Text(
               '',
-              style: FlutterFlowTheme.of(context).bodyText1,
+              style: FlutterFlowTheme.of(context).bodyMedium,
             ),
           ],
         ),
