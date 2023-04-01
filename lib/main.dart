@@ -96,7 +96,7 @@ class _MyAppState extends State<MyApp> {
             )
           : currentUser!.loggedIn
               ? NavBarPage()
-              : SplashScreenWidget(),
+              : LoginPage2Widget(),
     );
   }
 }
@@ -113,7 +113,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'MyProfile';
+  String _currentPageName = 'plantdetails';
   late Widget? _currentPage;
 
   @override
@@ -129,6 +129,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'plantdetails': PlantdetailsWidget(),
       'Camera': CameraWidget(),
       'MyProfile': MyProfileWidget(),
+      'Arduino': ArduinoWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
@@ -182,6 +183,18 @@ class _NavBarPageState extends State<NavBarPage> {
             label: 'My Profile',
             tooltip: '',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.device_hub_rounded,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.device_hub_outlined,
+              size: 24.0,
+            ),
+            label: 'Arduino',
+            tooltip: '',
+          )
         ],
       ),
     );

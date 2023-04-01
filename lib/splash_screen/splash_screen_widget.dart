@@ -208,7 +208,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                         0.0, 0.0, 0.0, 0.0),
                                     color: Color(0xFF008037),
                                     textStyle: FlutterFlowTheme.of(context)
-                                        .subtitle2
+                                        .titleSmall
                                         .override(
                                           fontFamily: 'Gamja Flower',
                                           color: FlutterFlowTheme.of(context)
@@ -218,7 +218,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .subtitle2Family),
+                                                      .titleSmallFamily),
                                         ),
                                     elevation: 3.0,
                                     borderSide: BorderSide(
@@ -250,7 +250,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Color(0xFF008037),
                                 textStyle: FlutterFlowTheme.of(context)
-                                    .subtitle2
+                                    .titleSmall
                                     .override(
                                       fontFamily: 'Gamja Flower',
                                       color: FlutterFlowTheme.of(context).white,
@@ -259,7 +259,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .subtitle2Family),
+                                                  .titleSmallFamily),
                                     ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(

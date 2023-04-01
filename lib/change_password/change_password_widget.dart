@@ -51,7 +51,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
               width: 50.0,
               height: 50.0,
               child: CircularProgressIndicator(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
               ),
             ),
           );
@@ -86,7 +86,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
             ),
             title: Text(
               'Change Password',
-              style: FlutterFlowTheme.of(context).title2,
+              style: FlutterFlowTheme.of(context).headlineMedium,
             ),
             actions: [],
             centerTitle: false,
@@ -131,7 +131,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                             child: Text(
                               'Enter your email and we will send a reset password link to your email for you to update it.',
                               style: FlutterFlowTheme.of(context)
-                                  .bodyText2
+                                  .bodySmall
                                   .override(
                                     fontFamily: 'Gamja Flower',
                                     color: Colors.black,
@@ -140,7 +140,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
-                                                .bodyText2Family),
+                                                .bodySmallFamily),
                                   ),
                             ),
                           ),
@@ -153,7 +153,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                               decoration: InputDecoration(
                                 labelText: 'Email address here...',
                                 labelStyle: FlutterFlowTheme.of(context)
-                                    .bodyText2
+                                    .bodySmall
                                     .override(
                                       fontFamily: 'Gamja Flower',
                                       color: Colors.black,
@@ -162,12 +162,12 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family),
+                                                  .bodySmallFamily),
                                     ),
                                 hintText:
                                     'We will send a link to your email...',
                                 hintStyle: FlutterFlowTheme.of(context)
-                                    .bodyText2
+                                    .bodySmall
                                     .override(
                                       fontFamily: 'Gamja Flower',
                                       color: FlutterFlowTheme.of(context).white,
@@ -176,7 +176,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family),
+                                                  .bodySmallFamily),
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -214,7 +214,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                 ),
                               ),
                               style: FlutterFlowTheme.of(context)
-                                  .bodyText1
+                                  .bodyMedium
                                   .override(
                                     fontFamily: 'Gamja Flower',
                                     color: FlutterFlowTheme.of(context).white,
@@ -222,7 +222,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
-                                                .bodyText1Family),
+                                                .bodyMediumFamily),
                                   ),
                               keyboardType: TextInputType.emailAddress,
                               validator: _model.emailTextControllerValidator
@@ -270,7 +270,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Color(0xFF008037),
                                       textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle1
+                                          .titleMedium
                                           .override(
                                             fontFamily: 'Gamja Flower',
                                             color: FlutterFlowTheme.of(context)
@@ -280,7 +280,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
-                                                        .subtitle1Family),
+                                                        .titleMediumFamily),
                                           ),
                                       elevation: 3.0,
                                       borderSide: BorderSide(

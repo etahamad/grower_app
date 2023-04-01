@@ -13,6 +13,7 @@ import '../main.dart';
 
 import 'lat_lng.dart';
 
+export 'keep_alive_wrapper.dart';
 export 'lat_lng.dart';
 export 'place.dart';
 export 'uploaded_file.dart';
@@ -35,7 +36,7 @@ String dateTimeFormat(String format, DateTime? dateTime, {String? locale}) {
   if (format == 'relative') {
     return timeago.format(dateTime, locale: locale);
   }
-  return DateFormat(format).format(dateTime);
+  return DateFormat(format, locale).format(dateTime);
 }
 
 Future launchURL(String url) async {
