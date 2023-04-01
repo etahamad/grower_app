@@ -149,13 +149,15 @@ class _ArduinoWidgetState extends State<ArduinoWidget> {
                           110.0, 30.0, 100.0, 0.0),
                       child: Text(
                         valueOrDefault<String>(
-                          (ListPlantInfoCall.listplantinfoRequestID(
-                            (_model.listplantinfo?.jsonBody ?? ''),
+                          (_model != null && _model.listplantinfo != null)
+                              ? (ListPlantInfoCall.listplantinfoRequestID(
+                            _model.listplantinfo?.jsonBody,
                           ) as List)
                               .map<String>((s) => s.toString())
                               .toList()
                               .first
-                              .toString(),
+                              .toString()
+                              : '0',
                           '0',
                         ),
                         textAlign: TextAlign.center,
@@ -184,13 +186,15 @@ class _ArduinoWidgetState extends State<ArduinoWidget> {
                       EdgeInsetsDirectional.fromSTEB(110.0, 30.0, 100.0, 0.0),
                   child: Text(
                     valueOrDefault<String>(
-                      (ListPlantInfoCall.listplantinfoMoisture(
-                        (_model.listplantinfo?.jsonBody ?? ''),
+                      (_model != null && _model.listplantinfo != null)
+                          ? (ListPlantInfoCall.listplantinfoMoisture(
+                        _model.listplantinfo?.jsonBody,
                       ) as List)
                           .map<String>((s) => s.toString())
                           .toList()
                           .first
-                          .toString(),
+                          .toString()
+                          : '0',
                       '0',
                     ),
                     textAlign: TextAlign.center,
@@ -210,13 +214,15 @@ class _ArduinoWidgetState extends State<ArduinoWidget> {
                     EdgeInsetsDirectional.fromSTEB(110.0, 30.0, 100.0, 0.0),
                 child: Text(
                   valueOrDefault<String>(
-                    (ListPlantInfoCall.listplantinfoHumidity(
-                      (_model.listplantinfo?.jsonBody ?? ''),
+                    (_model != null && _model.listplantinfo != null)
+                        ? (ListPlantInfoCall.listplantinfoHumidity(
+                      _model.listplantinfo?.jsonBody,
                     ) as List)
                         .map<String>((s) => s.toString())
                         .toList()
                         .first
-                        .toString(),
+                        .toString()
+                        : '0',
                     '0',
                   ),
                   textAlign: TextAlign.center,
@@ -235,13 +241,15 @@ class _ArduinoWidgetState extends State<ArduinoWidget> {
                     EdgeInsetsDirectional.fromSTEB(110.0, 30.0, 100.0, 0.0),
                 child: Text(
                   valueOrDefault<String>(
-                    (ListPlantInfoCall.listplantinfoTemp(
-                      (_model.listplantinfo?.jsonBody ?? ''),
+                    (_model != null && _model.listplantinfo != null)
+                        ? (ListPlantInfoCall.listplantinfoTemp(
+                      _model.listplantinfo?.jsonBody,
                     ) as List)
                         .map<String>((s) => s.toString())
                         .toList()
                         .first
-                        .toString(),
+                        .toString()
+                        : '0',
                     '0',
                   ),
                   textAlign: TextAlign.center,
@@ -266,13 +274,15 @@ class _ArduinoWidgetState extends State<ArduinoWidget> {
                       EdgeInsetsDirectional.fromSTEB(110.0, 30.0, 100.0, 0.0),
                   child: Text(
                     valueOrDefault<String>(
-                      (ListPlantInfoCall.listplantinfoDateTime(
-                        (_model.listplantinfo?.jsonBody ?? ''),
+                      (_model != null && _model.listplantinfo != null)
+                          ? (ListPlantInfoCall.listplantinfoDateTime(
+                        _model.listplantinfo?.jsonBody,
                       ) as List)
                           .map<String>((s) => s.toString())
                           .toList()
                           .first
-                          .toString(),
+                          .toString()
+                          : '0',
                       '0',
                     ),
                     textAlign: TextAlign.center,
