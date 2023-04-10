@@ -90,7 +90,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
               width: 50.0,
               height: 50.0,
               child: CircularProgressIndicator(
-                color: FlutterFlowTheme.of(context).primary,
+                color: Color(0xC842BEA5),
               ),
             ),
           );

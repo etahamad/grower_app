@@ -57,7 +57,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               width: 50.0,
               height: 50.0,
               child: CircularProgressIndicator(
-                color: FlutterFlowTheme.of(context).primary,
+                color: Color(0xC842BEA5),
               ),
             ),
           );
@@ -140,7 +140,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 width: 50.0,
                                 height: 50.0,
                                 child: CircularProgressIndicator(
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: Color(0xC842BEA5),
                                 ),
                               ),
                             );

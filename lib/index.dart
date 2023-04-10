@@ -8,4 +8,5 @@ export '/camera/camera_widget.dart' show CameraWidget;
 export '/change_password/change_password_widget.dart' show ChangePasswordWidget;
 export '/plantdetails/plantdetails_widget.dart' show PlantdetailsWidget;
 export '/arduino/arduino_widget.dart' show ArduinoWidget;
+export '/monitoring_page/monitoring_page_widget.dart' show MonitoringPageWidget;
 export '/login_page2/login_page2_widget.dart' show LoginPage2Widget;
