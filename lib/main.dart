@@ -126,10 +126,10 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'plantdetails': PlantdetailsWidget(),
-      'Camera': CameraWidget(),
       'MyProfile': MyProfileWidget(),
-      'Arduino': ArduinoWidget(),
+      'Camera': CameraWidget(),
+      'plantdetails': PlantdetailsWidget(),
+      'MonitoringPage': MonitoringPageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
@@ -149,14 +149,14 @@ class _NavBarPageState extends State<NavBarPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home_outlined,
+              Icons.person_outline,
               size: 24.0,
             ),
             activeIcon: Icon(
-              Icons.home,
+              Icons.person_sharp,
               size: 24.0,
             ),
-            label: 'Home',
+            label: 'You',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -173,26 +173,26 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person_outline,
+              Icons.home_outlined,
               size: 24.0,
             ),
             activeIcon: Icon(
-              Icons.person_sharp,
+              Icons.home,
               size: 24.0,
             ),
-            label: 'You',
+            label: 'Home',
             tooltip: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.device_hub_rounded,
+              Icons.remove_red_eye_outlined,
               size: 24.0,
             ),
             activeIcon: Icon(
-              Icons.device_hub_outlined,
+              Icons.remove_red_eye_sharp,
               size: 24.0,
             ),
-            label: 'Arduino',
+            label: 'Monitoring',
             tooltip: '',
           )
         ],
