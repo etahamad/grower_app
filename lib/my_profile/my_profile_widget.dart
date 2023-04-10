@@ -100,7 +100,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           appBar: AppBar(
-            backgroundColor: Color(0xFF008037),
+            backgroundColor: Color(0xD54FB6AA),
             automaticallyImplyLeading: false,
             title: Text(
               'Welcome',
@@ -134,10 +134,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                               width: MediaQuery.of(context).size.width * 1.0,
                               height: 40.0,
                               decoration: BoxDecoration(
-                                color: Color(0xFF299B22),
+                                color: Color(0xD54FB6AA),
                                 shape: BoxShape.rectangle,
                                 border: Border.all(
-                                  color: Color(0xFF299B22),
+                                  color: Color(0xFFA8CF45),
                                   width: 1.0,
                                 ),
                               ),
@@ -253,7 +253,8 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                             0.0, 0.0, 12.0, 0.0),
                                         child: Icon(
                                           Icons.arrow_forward_ios,
-                                          color: Color(0xFFA8CF45),
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary400,
                                           size: 24.0,
                                         ),
                                       ),
@@ -310,7 +311,8 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                           0.0, 0.0, 12.0, 0.0),
                                       child: Icon(
                                         Icons.arrow_forward_ios,
-                                        color: Color(0xFFA8CF45),
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiary400,
                                         size: 24.0,
                                       ),
                                     ),
@@ -419,7 +421,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                           child: Icon(
                                                             Icons.nights_stay,
                                                             color: Color(
-                                                                0xFFA8CF45),
+                                                                0xD54FB6AA),
                                                             size: 20.0,
                                                           ),
                                                         ),
@@ -433,8 +435,9 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                           height: 25.0,
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: Color(
-                                                                0xFF008037),
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .tertiary400,
                                                             boxShadow: [
                                                               BoxShadow(
                                                                 blurRadius: 4.0,
@@ -641,15 +644,14 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
+                                          .tertiary400,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .titleMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
+                                            color: Colors.black,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
@@ -667,7 +669,18 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 Text(
                                   'App Version v0.0',
                                   textAlign: TextAlign.center,
-                                  style: FlutterFlowTheme.of(context).bodySmall,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodySmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .grayIcon,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmallFamily),
+                                      ),
                                 ),
                               ],
                             ),

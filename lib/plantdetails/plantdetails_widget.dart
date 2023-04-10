@@ -37,7 +37,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
       key: scaffoldKey,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF008037),
+        backgroundColor: Color(0xD54FB6AA),
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
@@ -45,7 +45,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
           },
           child: Icon(
             Icons.chevron_left_rounded,
-            color: Color(0xFFA8CF45),
+            color: Color(0xFF629F93),
             size: 32.0,
           ),
         ),
@@ -53,7 +53,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
           'plants details',
           style: FlutterFlowTheme.of(context).headlineMedium.override(
                 fontFamily: 'Gamja Flower',
-                color: FlutterFlowTheme.of(context).white,
+                color: Colors.black,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
                 useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -94,7 +94,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
-                                color: Color(0xFF0F1113),
+                                color: Colors.black,
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -154,7 +154,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Gamja Flower',
-                                        color: Color(0xFF57636C),
+                                        color: Colors.black,
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -213,7 +213,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Lexend Deca',
-                                        color: Color(0xFF57636C),
+                                        color: Colors.black,
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -272,7 +272,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Lexend Deca',
-                                        color: Color(0xFF57636C),
+                                        color: Colors.black,
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -331,7 +331,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Lexend Deca',
-                                        color: Color(0xFF57636C),
+                                        color: Colors.black,
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                         useGoogleFonts: GoogleFonts.asMap()

@@ -72,9 +72,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
             : null;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: Color(0xFF39D2C0),
           appBar: AppBar(
-            backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+            backgroundColor: Color(0xD54FB6AA),
             automaticallyImplyLeading: false,
             leading: FlutterFlowIconButton(
               borderColor: Colors.transparent,
@@ -82,7 +82,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               buttonSize: 48.0,
               icon: Icon(
                 Icons.chevron_left_rounded,
-                color: Color(0xFFA8CF45),
+                color: FlutterFlowTheme.of(context).tertiary400,
                 size: 30.0,
               ),
               onPressed: () async {
@@ -107,7 +107,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               key: _model.formKey,
               autovalidateMode: AutovalidateMode.disabled,
               child: Column(
-                mainAxisSize: MainAxisSize.max,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width * 1.0,
@@ -129,7 +129,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
                       child: StreamBuilder<UsersRecord>(
                         stream: UsersRecord.getDocument(currentUserReference!),
                         builder: (context, snapshot) {
@@ -147,7 +147,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           }
                           final columnUsersRecord = snapshot.data!;
                           return Column(
-                            mainAxisSize: MainAxisSize.max,
+                            mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -236,10 +236,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: Color(0xFF008037),
+                                    fillColor: FlutterFlowTheme.of(context)
+                                        .tertiary400,
                                     prefixIcon: Icon(
                                       Icons.person_rounded,
-                                      color: Color(0xFFA8CF45),
+                                      color: Color(0xFF629F93),
                                     ),
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -327,10 +328,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: Color(0xFF008037),
+                                    fillColor: FlutterFlowTheme.of(context)
+                                        .tertiary400,
                                     prefixIcon: Icon(
                                       Icons.email_outlined,
-                                      color: Color(0xFFA8CF45),
+                                      color: Color(0xFF629F93),
                                     ),
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -384,24 +386,23 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: Color(0xFF008037),
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Gamja Flower',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .white,
-                                                fontSize: 25.0,
-                                                fontWeight: FontWeight.bold,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .titleMediumFamily),
-                                              ),
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary400,
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleMedium
+                                                  .override(
+                                                    fontFamily: 'Gamja Flower',
+                                                    color: Colors.black,
+                                                    fontSize: 25.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .titleMediumFamily),
+                                                  ),
                                           elevation: 3.0,
                                           borderSide: BorderSide(
                                             color: Colors.transparent,

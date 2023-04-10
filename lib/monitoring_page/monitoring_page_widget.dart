@@ -50,14 +50,14 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
       onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Colors.white,
+        backgroundColor: FlutterFlowTheme.of(context).white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(120.0),
+          preferredSize: Size.fromHeight(80.0),
           child: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: Color(0xD54FB6AA),
             automaticallyImplyLeading: false,
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 14.0),
+              padding: EdgeInsetsDirectional.fromSTEB(14.0, 0.0, 0.0, 14.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -68,9 +68,8 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
+                        Align(
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: FlutterFlowIconButton(
                             borderColor: Colors.transparent,
                             borderRadius: 30.0,
@@ -78,7 +77,7 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                             buttonSize: 50.0,
                             icon: Icon(
                               Icons.arrow_back_rounded,
-                              color: Color(0xFF0F1113),
+                              color: FlutterFlowTheme.of(context).white,
                               size: 30.0,
                             ),
                             onPressed: () async {
@@ -91,7 +90,7 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 2.0),
                     child: Text(
                       'Monitoring',
                       style: FlutterFlowTheme.of(context).displaySmall.override(
@@ -110,6 +109,7 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
             ),
             actions: [],
             centerTitle: true,
+            toolbarHeight: 80.0,
             elevation: 0.0,
           ),
         ),
@@ -118,170 +118,178 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 17.0, 20.0, 0.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            '32%',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Outfit',
-                                  color: Color(0xFF0F1113),
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.normal,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily),
+                Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(20.0, 17.0, 20.0, 0.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              '32%',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Color(0xFF0F1113),
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 12.0, 0.0, 0.0),
+                              child: Container(
+                                width: 36.0,
+                                height: 57.0,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF39D2C0),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 12.0, 0.0, 0.0),
-                            child: Container(
-                              width: 36.0,
-                              height: 57.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF39D2C0),
-                                borderRadius: BorderRadius.circular(12.0),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            '48%',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Outfit',
-                                  color: Color(0xFF0F1113),
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.normal,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily),
+                          ],
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              '48%',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Color(0xFF0F1113),
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 12.0, 0.0, 0.0),
+                              child: Container(
+                                width: 36.0,
+                                height: 89.0,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF39D2C0),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 12.0, 0.0, 0.0),
-                            child: Container(
-                              width: 36.0,
-                              height: 89.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF39D2C0),
-                                borderRadius: BorderRadius.circular(12.0),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            '65%',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Outfit',
-                                  color: Color(0xFF0F1113),
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.normal,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily),
+                          ],
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              '65%',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Color(0xFF0F1113),
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 12.0, 0.0, 0.0),
+                              child: Container(
+                                width: 36.0,
+                                height: 100.0,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF39D2C0),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 12.0, 0.0, 0.0),
-                            child: Container(
-                              width: 36.0,
-                              height: 100.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF39D2C0),
-                                borderRadius: BorderRadius.circular(12.0),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            '40%',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Outfit',
-                                  color: Color(0xFF0F1113),
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.normal,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily),
+                          ],
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              '40%',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Color(0xFF0F1113),
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 12.0, 0.0, 0.0),
+                              child: Container(
+                                width: 36.0,
+                                height: 67.0,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF39D2C0),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 12.0, 0.0, 0.0),
-                            child: Container(
-                              width: 36.0,
-                              height: 67.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF39D2C0),
-                                borderRadius: BorderRadius.circular(12.0),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            '80%',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Outfit',
-                                  color: Color(0xFF0F1113),
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.normal,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily),
+                          ],
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              '80%',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    color: Color(0xFF0F1113),
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 12.0, 0.0, 0.0),
+                              child: Container(
+                                width: 36.0,
+                                height: 156.0,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF39D2C0),
+                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 12.0, 0.0, 0.0),
-                            child: Container(
-                              width: 36.0,
-                              height: 156.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF39D2C0),
-                                borderRadius: BorderRadius.circular(12.0),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
@@ -295,7 +303,7 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                         style:
                             FlutterFlowTheme.of(context).titleMedium.override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF0F1113),
+                                  color: Colors.black,
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w500,
                                   useGoogleFonts: GoogleFonts.asMap()
