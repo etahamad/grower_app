@@ -12,6 +12,7 @@ import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'index.dart';
+import 'monitoring_page/monitoring_page_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

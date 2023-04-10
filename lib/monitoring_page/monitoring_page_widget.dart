@@ -340,13 +340,15 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                                   0.0, 12.0, 0.0, 12.0),
                               child: Text(
                                 valueOrDefault<String>(
-                                  (ListPlantInfoCall.listplantinfoTemp(
-                                    (_model.listplantinfo?.jsonBody ?? ''),
+                                  (_model != null && _model.listplantinfo != null)
+                                      ? (ListPlantInfoCall.listplantinfoTemp(
+                                    _model.listplantinfo?.jsonBody,
                                   ) as List)
                                       .map<String>((s) => s.toString())
                                       .toList()
-                                      .last
-                                      .toString(),
+                                      .first
+                                      .toString()
+                                      : '0',
                                   '0',
                                 ),
                                 textAlign: TextAlign.center,
@@ -407,20 +409,18 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 12.0),
                               child: Text(
-                                '56.4k',
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
-                                    .displaySmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF0F1113),
-                                      fontSize: 32.0,
-                                      fontWeight: FontWeight.w500,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .displaySmallFamily),
-                                    ),
+                                valueOrDefault<String>(
+                                  (_model != null && _model.listplantinfo != null)
+                                      ? (ListPlantInfoCall.listplantinfoHumidity(
+                                    _model.listplantinfo?.jsonBody,
+                                  ) as List)
+                                      .map<String>((s) => s.toString())
+                                      .toList()
+                                      .first
+                                      .toString()
+                                      : '0',
+                                  '0',
+                                ),
                               ),
                             ),
                             Text(
@@ -466,20 +466,18 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 12.0),
                               child: Text(
-                                '59',
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
-                                    .displaySmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF0F1113),
-                                      fontSize: 32.0,
-                                      fontWeight: FontWeight.w500,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .displaySmallFamily),
-                                    ),
+                                valueOrDefault<String>(
+                                  (_model != null && _model.listplantinfo != null)
+                                      ? (ListPlantInfoCall.listplantinfoMoisture(
+                                    _model.listplantinfo?.jsonBody,
+                                  ) as List)
+                                      .map<String>((s) => s.toString())
+                                      .toList()
+                                      .first
+                                      .toString()
+                                      : '0',
+                                  '0',
+                                ),
                               ),
                             ),
                             Text(
