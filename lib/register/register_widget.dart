@@ -44,7 +44,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).white,
+      backgroundColor: Color(0xFFB1E7E0),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -134,7 +134,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               filled: true,
-                              fillColor: Color(0xFF008037),
+                              fillColor:
+                                  FlutterFlowTheme.of(context).tertiary400,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -201,7 +202,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 filled: true,
-                                fillColor: Color(0xFF008037),
+                                fillColor:
+                                    FlutterFlowTheme.of(context).tertiary400,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -270,7 +272,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 filled: true,
-                                fillColor: Color(0xFF008037),
+                                fillColor:
+                                    FlutterFlowTheme.of(context).tertiary400,
                                 suffixIcon: InkWell(
                                   onTap: () => setState(
                                     () => _model.signupPasswordVisibility =
@@ -355,7 +358,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 filled: true,
-                                fillColor: Color(0xFF008037),
+                                fillColor:
+                                    FlutterFlowTheme.of(context).tertiary400,
                                 suffixIcon: InkWell(
                                   onTap: () => setState(
                                     () => _model
@@ -435,7 +439,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                     0.0, 0.0, 0.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF008037),
+                                color: FlutterFlowTheme.of(context).tertiary400,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -522,7 +526,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF008037),
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiary400,
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(

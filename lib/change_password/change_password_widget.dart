@@ -67,7 +67,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                 : null;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: Color(0xD54FB6AA),
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
             automaticallyImplyLeading: false,
@@ -77,7 +77,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
               buttonSize: 48.0,
               icon: Icon(
                 Icons.chevron_left_rounded,
-                color: Color(0xFFA8CF45),
+                color: FlutterFlowTheme.of(context).tertiary400,
                 size: 30.0,
               ),
               onPressed: () async {
@@ -207,10 +207,11 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 filled: true,
-                                fillColor: Color(0xFF008037),
+                                fillColor:
+                                    FlutterFlowTheme.of(context).tertiary400,
                                 prefixIcon: Icon(
                                   Icons.email_outlined,
-                                  color: Color(0xFFA8CF45),
+                                  color: Color(0xFF629F93),
                                 ),
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -268,13 +269,13 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFF008037),
+                                      color: FlutterFlowTheme.of(context)
+                                          .tertiary400,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
                                             fontFamily: 'Gamja Flower',
-                                            color: FlutterFlowTheme.of(context)
-                                                .white,
+                                            color: Colors.black,
                                             fontSize: 25.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts: GoogleFonts.asMap()

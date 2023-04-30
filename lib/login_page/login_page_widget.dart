@@ -135,7 +135,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 filled: true,
-                                fillColor: Color(0xFF008037),
+                                fillColor:
+                                    FlutterFlowTheme.of(context).secondary,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium

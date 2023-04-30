@@ -128,8 +128,8 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'MyProfile': MyProfileWidget(),
-      'Camera': CameraWidget(),
       'plantdetails': PlantdetailsWidget(),
+      'Camera': CameraWidget(),
       'MonitoringPage': MonitoringPageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -141,9 +141,9 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: Color(0xFF008037),
-        selectedItemColor: Color(0xFFA8CF45),
-        unselectedItemColor: FlutterFlowTheme.of(context).white,
+        backgroundColor: FlutterFlowTheme.of(context).primary,
+        selectedItemColor: FlutterFlowTheme.of(context).black600,
+        unselectedItemColor: FlutterFlowTheme.of(context).primaryBlack,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
@@ -162,18 +162,6 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.camera_alt_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.camera_alt,
-              size: 24.0,
-            ),
-            label: 'Camera',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.home_outlined,
               size: 24.0,
             ),
@@ -182,6 +170,18 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.camera_alt_outlined,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.camera_alt,
+              size: 24.0,
+            ),
+            label: 'Camera',
             tooltip: '',
           ),
           BottomNavigationBarItem(

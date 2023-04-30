@@ -206,13 +206,13 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFF008037),
+                                    color: FlutterFlowTheme.of(context)
+                                        .tertiary400,
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
                                           fontFamily: 'Gamja Flower',
-                                          color: FlutterFlowTheme.of(context)
-                                              .white,
+                                          color: Colors.black,
                                           fontSize: 25.0,
                                           fontWeight: FontWeight.bold,
                                           useGoogleFonts: GoogleFonts.asMap()
@@ -248,12 +248,12 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                     0.0, 0.0, 0.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF008037),
+                                color: FlutterFlowTheme.of(context).tertiary400,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Gamja Flower',
-                                      color: FlutterFlowTheme.of(context).white,
+                                      color: Colors.black,
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()

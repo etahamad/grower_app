@@ -51,7 +51,7 @@ class _CameraWidgetState extends State<CameraWidget> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100.0),
         child: AppBar(
-          backgroundColor: Color(0xFF008037),
+          backgroundColor: Color(0xD54FB6AA),
           automaticallyImplyLeading: false,
           actions: [],
           flexibleSpace: FlexibleSpaceBar(
@@ -77,7 +77,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                             buttonSize: 50.0,
                             icon: Icon(
                               Icons.arrow_back_rounded,
-                              color: Color(0xFFA8CF45),
+                              color: FlutterFlowTheme.of(context).tertiary400,
                               size: 30.0,
                             ),
                             onPressed: () async {
@@ -101,7 +101,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .headlineMediumFamily,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontSize: 16.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -121,7 +121,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .headlineMediumFamily,
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 22.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
@@ -227,7 +227,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: Image.asset(
-                                'assets/images/logocam.png',
+                                'assets/images/imgUploadAsset.jpg',
                               ).image,
                             ),
                             borderRadius: BorderRadius.circular(25.0),
@@ -279,10 +279,10 @@ class _CameraWidgetState extends State<CameraWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: Color(0xFF008037),
+                  color: FlutterFlowTheme.of(context).tertiary400,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Gamja Flower',
-                        color: Colors.white,
+                        color: Colors.black,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(
