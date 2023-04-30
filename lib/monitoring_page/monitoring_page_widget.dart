@@ -346,7 +346,7 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                                   ) as List)
                                       .map<String>((s) => s.toString())
                                       .toList()
-                                      .first
+                                      .last
                                       .toString()
                                       : '0',
                                   '0',
@@ -416,7 +416,7 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                                   ) as List)
                                       .map<String>((s) => s.toString())
                                       .toList()
-                                      .first
+                                      .last
                                       .toString()
                                       : '0',
                                   '0',
@@ -473,7 +473,7 @@ class _MonitoringPageWidgetState extends State<MonitoringPageWidget>
                                   ) as List)
                                       .map<String>((s) => s.toString())
                                       .toList()
-                                      .first
+                                      .last
                                       .toString()
                                       : '0',
                                   '0',
