@@ -44,7 +44,7 @@ dependencies:
   firebase_storage: 11.0.7
   firebase_storage_platform_interface: 4.1.25
   firebase_storage_web: 3.3.17
-  flutter_animate: 1.0.0
+  flutter_animate: ^4.1.1+1
   flutter_cache_manager: 3.3.0
   font_awesome_flutter: 10.1.0
   from_css_color: 2.0.0
