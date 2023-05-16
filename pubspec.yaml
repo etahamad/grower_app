@@ -46,7 +46,7 @@ dependencies:
   firebase_storage_web: 3.3.17
   flutter_animate: 1.0.0
   flutter_cache_manager: 3.3.0
-  font_awesome_flutter: 10.1.0
+  font_awesome_flutter: ^10.4.0
   from_css_color: 2.0.0
   google_fonts: 3.0.1
   google_sign_in: 5.4.0
