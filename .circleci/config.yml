@@ -6,6 +6,7 @@ jobs:
       - image: cirrusci/flutter:3.0.1
     steps:
       - checkout
+      - run: flutter channel beta
       - run: flutter upgrade
       - run: flutter doctor
       - run: flutter build apk --release
