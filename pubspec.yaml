@@ -74,7 +74,7 @@ dependencies:
   switcher_button:
   timeago: 3.2.2
   url_launcher: 6.1.5
-  video_player: 2.4.5
+  video_player: ^2.6.0
   video_player_android: 2.3.8
   video_player_avfoundation: 2.3.5
   video_player_platform_interface: 5.1.3
