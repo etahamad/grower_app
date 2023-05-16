@@ -3,11 +3,9 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cirrusci/flutter:3.0.1
+      - image: cirrusci/flutter:beta
     steps:
       - checkout
-      - run: flutter channel beta
-      - run: flutter upgrade
       - run: flutter doctor
       - run: flutter build apk --release
       - store_artifacts:
