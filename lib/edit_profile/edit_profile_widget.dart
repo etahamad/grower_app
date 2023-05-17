@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -72,9 +72,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
             : null;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: Color(0xFF39D2C0),
+          backgroundColor: FlutterFlowTheme.of(context).white,
           appBar: AppBar(
-            backgroundColor: Color(0xD54FB6AA),
+            backgroundColor: FlutterFlowTheme.of(context).white,
             automaticallyImplyLeading: false,
             leading: FlutterFlowIconButton(
               borderColor: Colors.transparent,
@@ -161,7 +161,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       .override(
                                         fontFamily: 'Gamja Flower',
                                         color: Colors.black,
-                                        fontSize: 16.0,
+                                        fontSize: 20.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -388,21 +388,23 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary400,
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleMedium
-                                                  .override(
-                                                    fontFamily: 'Gamja Flower',
-                                                    color: Colors.black,
-                                                    fontSize: 25.0,
-                                                    fontWeight: FontWeight.bold,
-                                                    useGoogleFonts: GoogleFonts
-                                                            .asMap()
-                                                        .containsKey(
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .titleMediumFamily),
-                                                  ),
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .titleMedium
+                                              .override(
+                                                fontFamily: 'Gamja Flower',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .white,
+                                                fontSize: 25.0,
+                                                fontWeight: FontWeight.bold,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleMediumFamily),
+                                              ),
                                           elevation: 3.0,
                                           borderSide: BorderSide(
                                             color: Colors.transparent,

@@ -47,8 +47,8 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: 1.0,
-          end: 1.0,
+          begin: Offset(1.0, 1.0),
+          end: Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -73,8 +73,8 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
           curve: Curves.easeInOut,
           delay: 250.ms,
           duration: 600.ms,
-          begin: 1.0,
-          end: 1.0,
+          begin: Offset(1.0, 1.0),
+          end: Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -99,8 +99,8 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
           curve: Curves.easeInOut,
           delay: 420.ms,
           duration: 600.ms,
-          begin: 1.0,
-          end: 1.0,
+          begin: Offset(1.0, 1.0),
+          end: Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -212,7 +212,8 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                         .titleSmall
                                         .override(
                                           fontFamily: 'Gamja Flower',
-                                          color: Colors.black,
+                                          color: FlutterFlowTheme.of(context)
+                                              .white,
                                           fontSize: 25.0,
                                           fontWeight: FontWeight.bold,
                                           useGoogleFonts: GoogleFonts.asMap()
@@ -253,7 +254,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Gamja Flower',
-                                      color: Colors.black,
+                                      color: FlutterFlowTheme.of(context).white,
                                       fontSize: 25.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()

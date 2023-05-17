@@ -51,7 +51,7 @@ class _CameraWidgetState extends State<CameraWidget> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100.0),
         child: AppBar(
-          backgroundColor: Color(0xD54FB6AA),
+          backgroundColor: FlutterFlowTheme.of(context).tertiary400,
           automaticallyImplyLeading: false,
           actions: [],
           flexibleSpace: FlexibleSpaceBar(
@@ -77,7 +77,8 @@ class _CameraWidgetState extends State<CameraWidget> {
                             buttonSize: 50.0,
                             icon: Icon(
                               Icons.arrow_back_rounded,
-                              color: FlutterFlowTheme.of(context).tertiary400,
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
                               size: 30.0,
                             ),
                             onPressed: () async {
@@ -101,7 +102,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .headlineMediumFamily,
-                                  color: Colors.black,
+                                  color: FlutterFlowTheme.of(context).white,
                                   fontSize: 16.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -121,7 +122,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .headlineMediumFamily,
-                                color: Colors.black,
+                                color: FlutterFlowTheme.of(context).white,
                                 fontSize: 22.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
@@ -171,6 +172,10 @@ class _CameraWidgetState extends State<CameraWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(
                           15.0, 60.0, 15.0, 15.0),
                       child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onTap: () async {
                           final selectedMedia =
                               await selectMediaWithSourceBottomSheet(
@@ -191,6 +196,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                                         bytes: m.bytes,
                                         height: m.dimensions?.height,
                                         width: m.dimensions?.width,
+                                        blurHash: m.blurHash,
                                       ))
                                   .toList();
                               downloadUrls = (await Future.wait(
@@ -223,7 +229,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                           width: 368.0,
                           height: 286.0,
                           decoration: BoxDecoration(
-                            color: Color(0xFF008037),
+                            color: FlutterFlowTheme.of(context).tertiary400,
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: Image.asset(
@@ -233,7 +239,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                             borderRadius: BorderRadius.circular(25.0),
                             shape: BoxShape.rectangle,
                             border: Border.all(
-                              color: Color(0xFF008037),
+                              color: FlutterFlowTheme.of(context).tertiary400,
                             ),
                           ),
                           child: Visibility(
@@ -282,7 +288,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                   color: FlutterFlowTheme.of(context).tertiary400,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Gamja Flower',
-                        color: Colors.black,
+                        color: FlutterFlowTheme.of(context).white,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(

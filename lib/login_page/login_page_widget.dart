@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -136,7 +136,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 ),
                                 filled: true,
                                 fillColor:
-                                    FlutterFlowTheme.of(context).secondary,
+                                    FlutterFlowTheme.of(context).tertiary400,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -205,7 +205,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 filled: true,
-                                fillColor: Color(0xFF008037),
+                                fillColor:
+                                    FlutterFlowTheme.of(context).tertiary400,
                                 suffixIcon: InkWell(
                                   onTap: () => setState(
                                     () => _model.loginPasswordVisibility =
@@ -216,7 +217,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     _model.loginPasswordVisibility
                                         ? Icons.visibility_outlined
                                         : Icons.visibility_off_outlined,
-                                    color: Color(0xFFA8CF45),
+                                    color: Color(0xFF99C926),
                                     size: 22.0,
                                   ),
                                 ),
@@ -242,7 +243,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 0.0, 24.0, 0.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
-                                final user = await signInWithEmail(
+                                final user = await authManager.signInWithEmail(
                                   context,
                                   _model.loginEmailController.text,
                                   _model.loginPasswordController.text,
@@ -267,7 +268,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     0.0, 0.0, 0.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF008037),
+                                color: FlutterFlowTheme.of(context).tertiary400,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -354,7 +355,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF008037),
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiary400,
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
