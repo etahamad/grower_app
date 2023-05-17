@@ -768,17 +768,18 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                       .fromSTEB(
                                                           0.0, 8.0, 0.0, 0.0),
                                                   child: Text(
-                                                    (ListPlantInfoCall
-                                                            .listplantinfoHumidity(
-                                                      (_model.apiResult9ab
-                                                              ?.jsonBody ??
-                                                          ''),
-                                                    ) as List)
-                                                        .map<String>(
-                                                            (s) => s.toString())
-                                                        .toList()
-                                                        .first
-                                                        .toString(),
+                                                    valueOrDefault<String>(
+                                                      (_model != null && _model.apiResult9ab?.jsonBody != null)
+                                                          ? (ListPlantInfoCall.listplantinfoHumidity(
+                                                        _model.apiResult9ab?.jsonBody ?? '',
+                                                      ) as List)
+                                                          .map<String>((s) => s.toString())
+                                                          .toList()
+                                                          .last
+                                                          .toString()
+                                                          : '0',
+                                                      '0',
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .displaySmall
@@ -915,17 +916,18 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                       .fromSTEB(
                                                           0.0, 8.0, 0.0, 0.0),
                                                   child: Text(
-                                                    (ListPlantInfoCall
-                                                            .listplantinfoMoisture(
-                                                      (_model.apiResultsba
-                                                              ?.jsonBody ??
-                                                          ''),
-                                                    ) as List)
-                                                        .map<String>(
-                                                            (s) => s.toString())
-                                                        .toList()
-                                                        .first
-                                                        .toString(),
+                                                    valueOrDefault<String>(
+                                                      (_model != null && _model.apiResultsba?.jsonBody != null)
+                                                          ? (ListPlantInfoCall.listplantinfoMoisture(
+                                                        _model.apiResultsba?.jsonBody ?? '',
+                                                      ) as List)
+                                                          .map<String>((s) => s.toString())
+                                                          .toList()
+                                                          .last
+                                                          .toString()
+                                                          : '0',
+                                                      '0',
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .displaySmall
@@ -1062,17 +1064,18 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                       .fromSTEB(
                                                           0.0, 8.0, 0.0, 0.0),
                                                   child: Text(
-                                                    (ListPlantInfoCall
-                                                            .listplantinfoTemp(
-                                                      (_model.apiResultpws
-                                                              ?.jsonBody ??
-                                                          ''),
-                                                    ) as List)
-                                                        .map<String>(
-                                                            (s) => s.toString())
-                                                        .toList()
-                                                        .first
-                                                        .toString(),
+                                                    valueOrDefault<String>(
+                                                      (_model != null && _model.apiResultpws?.jsonBody != null)
+                                                          ? (ListPlantInfoCall.listplantinfoTemp(
+                                                        _model.apiResultpws?.jsonBody ?? '',
+                                                      ) as List)
+                                                          .map<String>((s) => s.toString())
+                                                          .toList()
+                                                          .last
+                                                          .toString()
+                                                          : '0',
+                                                      '0',
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .displaySmall
@@ -1191,15 +1194,18 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
-                                          (ListPlantInfoCall
-                                                  .listplantinfoMoisture(
-                                            (_model.apiResultsba?.jsonBody ??
-                                                ''),
-                                          ) as List)
-                                              .map<String>((s) => s.toString())
-                                              .toList()
-                                              .first
-                                              .toString(),
+                                          valueOrDefault<String>(
+                                            (_model != null && _model.apiResultsba?.jsonBody != null)
+                                                ? (ListPlantInfoCall.listplantinfoMoisture(
+                                              _model.apiResultsba?.jsonBody ?? '',
+                                            ) as List)
+                                                .map<String>((s) => s.toString())
+                                                .toList()
+                                                .last
+                                                .toString()
+                                                : '0',
+                                            '0',
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
                                               .override(
@@ -1337,15 +1343,18 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
-                                          (ListPlantInfoCall
-                                                  .listplantinfoHumidity(
-                                            (_model.apiResult9ab?.jsonBody ??
-                                                ''),
-                                          ) as List)
-                                              .map<String>((s) => s.toString())
-                                              .toList()
-                                              .first
-                                              .toString(),
+                                          valueOrDefault<String>(
+                                            (_model != null && _model.apiResult9ab?.jsonBody != null)
+                                                ? (ListPlantInfoCall.listplantinfoHumidity(
+                                              _model.apiResult9ab?.jsonBody ?? '',
+                                            ) as List)
+                                                .map<String>((s) => s.toString())
+                                                .toList()
+                                                .last
+                                                .toString()
+                                                : '0',
+                                            '0',
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
                                               .override(
@@ -1483,14 +1492,18 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
-                                          (ListPlantInfoCall.listplantinfoTemp(
-                                            (_model.apiResultpws?.jsonBody ??
-                                                ''),
-                                          ) as List)
-                                              .map<String>((s) => s.toString())
-                                              .toList()
-                                              .first
-                                              .toString(),
+                                          valueOrDefault<String>(
+                                            (_model != null && _model.apiResultpws?.jsonBody != null)
+                                                ? (ListPlantInfoCall.listplantinfoTemp(
+                                              _model.apiResultpws?.jsonBody ?? '',
+                                            ) as List)
+                                                .map<String>((s) => s.toString())
+                                                .toList()
+                                                .last
+                                                .toString()
+                                                : '0',
+                                            '0',
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
                                               .override(
