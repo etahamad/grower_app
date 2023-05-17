@@ -3,6 +3,7 @@ import '/backend/backend.dart';
 import '/change_password/change_password_widget.dart';
 import '/edit_profile/edit_profile_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -102,17 +103,32 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).tertiary400,
             automaticallyImplyLeading: false,
+            leading: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30.0,
+              borderWidth: 1.0,
+              buttonSize: 55.0,
+              icon: Icon(
+                Icons.arrow_back_rounded,
+                color: Colors.white,
+                size: 25.0,
+              ),
+              onPressed: () async {
+                Navigator.pop(context);
+              },
+            ),
             title: Text(
               'Welcome',
               style: FlutterFlowTheme.of(context).displaySmall.override(
                     fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
                     color: FlutterFlowTheme.of(context).white,
+                    fontSize: 25.0,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
                         FlutterFlowTheme.of(context).displaySmallFamily),
                   ),
             ),
             actions: [],
-            centerTitle: false,
+            centerTitle: true,
             elevation: 0.0,
           ),
           body: SafeArea(
@@ -144,7 +160,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                               ),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 0.0, 0.0),
+                                    20.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   myProfileUsersRecord.displayName!,
                                   style: FlutterFlowTheme.of(context)
@@ -185,7 +201,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 12.0, 0.0, 0.0),
+                                    16.0, 25.0, 0.0, 0.0),
                                 child: Text(
                                   'Account Information',
                                   style: FlutterFlowTheme.of(context)
@@ -202,9 +218,14 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                       ),
                                 ),
                               ),
-                              Text(
-                                myProfileUsersRecord.email!,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    15.0, 0.0, 0.0, 0.0),
+                                child: Text(
+                                  myProfileUsersRecord.email!,
+                                  style:
+                                      FlutterFlowTheme.of(context).bodyMedium,
+                                ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(

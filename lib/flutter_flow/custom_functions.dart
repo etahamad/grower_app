@@ -14,3 +14,7 @@ import '../../auth/firebase_auth/auth_util.dart';
 bool? hasUploadedMedia(String? mediaPath) {
   return mediaPath != null && mediaPath.isNotEmpty;
 }
+
+double gerProgressValue(double percentage) {
+  return percentage / 100;
+}

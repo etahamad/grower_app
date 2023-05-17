@@ -129,7 +129,6 @@ class _NavBarPageState extends State<NavBarPage> {
       'MyProfile': MyProfileWidget(),
       'Camera': CameraWidget(),
       'plantdetails': PlantdetailsWidget(),
-      'MonitoringPage': MonitoringPageWidget(),
       'ardureads': ArdureadsWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -186,18 +185,6 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.remove_red_eye_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.remove_red_eye_sharp,
-              size: 24.0,
-            ),
-            label: 'Monitoring',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.dashboard_outlined,
               size: 25.0,
             ),
@@ -205,7 +192,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.dashboard_rounded,
               size: 25.0,
             ),
-            label: 'Ardu new',
+            label: 'Reads',
             tooltip: '',
           )
         ],
