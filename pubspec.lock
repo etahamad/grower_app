@@ -625,10 +625,10 @@ packages:
     dependency: "direct main"
     description:
       name: image_picker_ios
-      sha256: "1768087441bd69ca632249d212c26fa8d530552d37b4896a4dd8d6781435c147"
+      sha256: d779210bda268a03b57e923fb1e410f32f5c5e708ad256348bcbf1f44f558fd0
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.6+1"
+    version: "0.8.7+4"
   image_picker_platform_interface:
     dependency: "direct main"
     description:
