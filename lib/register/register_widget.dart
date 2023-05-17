@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -44,7 +44,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFFB1E7E0),
+      backgroundColor: FlutterFlowTheme.of(context).white,
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -411,7 +411,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   return;
                                 }
 
-                                final user = await createAccountWithEmail(
+                                final user =
+                                    await authManager.createAccountWithEmail(
                                   context,
                                   _model.signupEmailController.text,
                                   _model.signupPasswordController.text,

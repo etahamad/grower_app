@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/change_password/change_password_widget.dart';
 import '/edit_profile/edit_profile_widget.dart';
@@ -100,7 +100,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           appBar: AppBar(
-            backgroundColor: Color(0xD54FB6AA),
+            backgroundColor: FlutterFlowTheme.of(context).tertiary400,
             automaticallyImplyLeading: false,
             title: Text(
               'Welcome',
@@ -134,10 +134,11 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                               width: MediaQuery.of(context).size.width * 1.0,
                               height: 40.0,
                               decoration: BoxDecoration(
-                                color: Color(0xD54FB6AA),
+                                color: FlutterFlowTheme.of(context).tertiary400,
                                 shape: BoxShape.rectangle,
                                 border: Border.all(
-                                  color: Color(0xFFA8CF45),
+                                  color:
+                                      FlutterFlowTheme.of(context).tertiary400,
                                   width: 1.0,
                                 ),
                               ),
@@ -209,6 +210,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 0.0, 0.0),
                                 child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
                                   onTap: () async {
                                     await Navigator.push(
                                       context,
@@ -270,6 +275,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 color: FlutterFlowTheme.of(context).lineColor,
                               ),
                               InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
                                 onTap: () async {
                                   await Navigator.push(
                                     context,
@@ -335,6 +344,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                     if (!(Theme.of(context).brightness ==
                                         Brightness.dark))
                                       InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
                                         onTap: () async {
                                           setDarkModeSetting(
                                               context, ThemeMode.dark);
@@ -471,6 +484,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                     if (Theme.of(context).brightness ==
                                         Brightness.dark)
                                       InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
                                         onTap: () async {
                                           setDarkModeSetting(
                                               context, ThemeMode.light);
@@ -624,7 +641,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                       0.0, 0.0, 0.0, 16.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      await signOut();
+                                      await authManager.signOut();
                                       await Navigator.pushAndRemoveUntil(
                                         context,
                                         MaterialPageRoute(
@@ -651,7 +668,8 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .titleMediumFamily,
-                                            color: Colors.black,
+                                            color: FlutterFlowTheme.of(context)
+                                                .white,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
@@ -667,7 +685,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   ),
                                 ),
                                 Text(
-                                  'App Version v0.0',
+                                  'App Version v1.0',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall

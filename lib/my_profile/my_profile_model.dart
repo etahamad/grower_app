@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/change_password/change_password_widget.dart';
 import '/edit_profile/edit_profile_widget.dart';

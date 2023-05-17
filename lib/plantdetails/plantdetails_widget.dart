@@ -40,6 +40,10 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
         backgroundColor: Color(0xD54FB6AA),
         automaticallyImplyLeading: false,
         leading: InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
           onTap: () async {
             Navigator.pop(context);
           },
@@ -215,7 +219,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         fontFamily: 'Lexend Deca',
                                         color: Colors.black,
                                         fontSize: 14.0,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
@@ -274,7 +278,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         fontFamily: 'Lexend Deca',
                                         color: Colors.black,
                                         fontSize: 14.0,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
@@ -333,7 +337,7 @@ class _PlantdetailsWidgetState extends State<PlantdetailsWidget> {
                                         fontFamily: 'Lexend Deca',
                                         color: Colors.black,
                                         fontSize: 14.0,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)

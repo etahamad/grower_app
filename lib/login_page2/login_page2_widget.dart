@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -227,37 +227,40 @@ class _LoginPage2WidgetState extends State<LoginPage2Widget>
                                             initialIndex: 0,
                                             child: Column(
                                               children: [
-                                                TabBar(
-                                                  isScrollable: true,
-                                                  labelColor:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .primaryText,
-                                                  unselectedLabelColor:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .secondaryText,
-                                                  labelPadding:
-                                                      EdgeInsetsDirectional
-                                                          .fromSTEB(24.0, 0.0,
-                                                              24.0, 0.0),
-                                                  labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleMedium,
-                                                  indicatorColor:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .secondary,
-                                                  indicatorWeight: 2.0,
-                                                  tabs: [
-                                                    Tab(
-                                                      text: 'Sign In',
-                                                    ),
-                                                    Tab(
-                                                      text: 'Sign Up',
-                                                    ),
-                                                  ],
+                                                Align(
+                                                  alignment: Alignment(0.0, 0),
+                                                  child: TabBar(
+                                                    isScrollable: true,
+                                                    labelColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primaryText,
+                                                    unselectedLabelColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .secondaryText,
+                                                    labelPadding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(24.0, 0.0,
+                                                                24.0, 0.0),
+                                                    labelStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleMedium,
+                                                    indicatorColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .secondary,
+                                                    indicatorWeight: 2.0,
+                                                    tabs: [
+                                                      Tab(
+                                                        text: 'Sign In',
+                                                      ),
+                                                      Tab(
+                                                        text: 'Sign Up',
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                                 Expanded(
                                                   child: TabBarView(
@@ -585,7 +588,8 @@ class _LoginPage2WidgetState extends State<LoginPage2Widget>
                                                                     onPressed:
                                                                         () async {
                                                                       final user =
-                                                                          await signInWithEmail(
+                                                                          await authManager
+                                                                              .signInWithEmail(
                                                                         context,
                                                                         _model
                                                                             .emailAddressController
@@ -1085,7 +1089,8 @@ class _LoginPage2WidgetState extends State<LoginPage2Widget>
                                                                   }
 
                                                                   final user =
-                                                                      await createAccountWithEmail(
+                                                                      await authManager
+                                                                          .createAccountWithEmail(
                                                                     context,
                                                                     _model
                                                                         .emailAddressCreateController
@@ -1243,7 +1248,7 @@ class _LoginPage2WidgetState extends State<LoginPage2Widget>
                                                                       onPressed:
                                                                           () async {
                                                                         final user =
-                                                                            await signInWithGoogle(context);
+                                                                            await authManager.signInWithGoogle(context);
                                                                         if (user ==
                                                                             null) {
                                                                           return;
@@ -1291,7 +1296,7 @@ class _LoginPage2WidgetState extends State<LoginPage2Widget>
                                                                       onPressed:
                                                                           () async {
                                                                         final user =
-                                                                            await signInWithApple(context);
+                                                                            await authManager.signInWithApple(context);
                                                                         if (user ==
                                                                             null) {
                                                                           return;

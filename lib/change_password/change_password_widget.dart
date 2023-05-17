@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -67,7 +67,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                 : null;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: Color(0xD54FB6AA),
+          backgroundColor: FlutterFlowTheme.of(context).white,
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
             automaticallyImplyLeading: false,
@@ -135,7 +135,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                   .override(
                                     fontFamily: 'Gamja Flower',
                                     color: Colors.black,
-                                    fontSize: 18.0,
+                                    fontSize: 24.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -254,7 +254,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                         );
                                         return;
                                       }
-                                      await resetPassword(
+                                      await authManager.resetPassword(
                                         email: _model.emailTextController.text,
                                         context: context,
                                       );
@@ -275,7 +275,8 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                           .titleMedium
                                           .override(
                                             fontFamily: 'Gamja Flower',
-                                            color: Colors.black,
+                                            color: FlutterFlowTheme.of(context)
+                                                .white,
                                             fontSize: 25.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts: GoogleFonts.asMap()
