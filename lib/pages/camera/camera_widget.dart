@@ -13,6 +13,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'camera_model.dart';
 export 'camera_model.dart';
+import 'dart:convert';
 
 class CameraWidget extends StatefulWidget {
   const CameraWidget({Key? key}) : super(key: key);
@@ -220,8 +221,8 @@ class _CameraWidgetState extends State<CameraWidget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
-                  _model.apiResultqbw = await PlantImageAPICall.call();
-
+                  final encodedData = base64.encode(_model.uploadedLocalFile.bytes!);
+                  _model.apiResultqbw = await PlantImageAPICall.call(uploadPlantImage: '$encodedData');
                   setState(() {});
                 },
                 text: 'Upload',
@@ -260,13 +261,13 @@ class _CameraWidgetState extends State<CameraWidget> {
                   child: Text(
                     getJsonField(
                       (_model.apiResultqbw?.jsonBody ?? ''),
-                      r'''$..label''',
-                    ).toString(),
+                      r'''$.data''',
+                    )?.first?.toString() ?? '',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Noto Sans',
                           color: Colors.black,
-                          fontSize: 22.0,
+                          fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodyMediumFamily),
