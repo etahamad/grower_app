@@ -1,53 +1,60 @@
 import 'dart:async';
 
+import '/backend/schema/util/firestore_util.dart';
+import '/backend/schema/util/schema_util.dart';
+
 import 'index.dart';
-import 'serializers.dart';
-import 'package:built_value/built_value.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
-part 'plants_record.g.dart';
+class PlantsRecord extends FirestoreRecord {
+  PlantsRecord._(
+    DocumentReference reference,
+    Map<String, dynamic> data,
+  ) : super(reference, data) {
+    _initializeFields();
+  }
 
-abstract class PlantsRecord
-    implements Built<PlantsRecord, PlantsRecordBuilder> {
-  static Serializer<PlantsRecord> get serializer => _$plantsRecordSerializer;
+  // "plantname" field.
+  String? _plantname;
+  String get plantname => _plantname ?? '';
+  bool hasPlantname() => _plantname != null;
 
-  String? get plantname;
-
-  @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference? get ffRef;
-  DocumentReference get reference => ffRef!;
-
-  static void _initializeBuilder(PlantsRecordBuilder builder) =>
-      builder..plantname = '';
+  void _initializeFields() {
+    _plantname = snapshotData['plantname'] as String?;
+  }
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('plants');
 
-  static Stream<PlantsRecord> getDocument(DocumentReference ref) => ref
-      .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Stream<PlantsRecord> getDocument(DocumentReference ref) =>
+      ref.snapshots().map((s) => PlantsRecord.fromSnapshot(s));
 
-  static Future<PlantsRecord> getDocumentOnce(DocumentReference ref) => ref
-      .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Future<PlantsRecord> getDocumentOnce(DocumentReference ref) =>
+      ref.get().then((s) => PlantsRecord.fromSnapshot(s));
 
-  PlantsRecord._();
-  factory PlantsRecord([void Function(PlantsRecordBuilder) updates]) =
-      _$PlantsRecord;
+  static PlantsRecord fromSnapshot(DocumentSnapshot snapshot) => PlantsRecord._(
+        snapshot.reference,
+        mapFromFirestore(snapshot.data() as Map<String, dynamic>),
+      );
 
   static PlantsRecord getDocumentFromData(
-          Map<String, dynamic> data, DocumentReference reference) =>
-      serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
+    Map<String, dynamic> data,
+    DocumentReference reference,
+  ) =>
+      PlantsRecord._(reference, mapFromFirestore(data));
+
+  @override
+  String toString() =>
+      'PlantsRecord(reference: ${reference.path}, data: $snapshotData)';
 }
 
 Map<String, dynamic> createPlantsRecordData({
   String? plantname,
 }) {
-  final firestoreData = serializers.toFirestore(
-    PlantsRecord.serializer,
-    PlantsRecord(
-      (p) => p..plantname = plantname,
-    ),
+  final firestoreData = mapToFirestore(
+    <String, dynamic>{
+      'plantname': plantname,
+    }.withoutNulls,
   );
 
   return firestoreData;

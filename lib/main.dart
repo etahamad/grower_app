@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'auth/firebase_auth/firebase_user_provider.dart';
 import 'auth/firebase_auth/auth_util.dart';
@@ -15,6 +16,7 @@ import 'index.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await initFirebase();
 
   await FlutterFlowTheme.initialize();
@@ -44,7 +46,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    userStream = agriAdiutorFirebaseUserStream()
+    userStream = growerFirebaseUserStream()
       ..listen((user) => initialUser ?? setState(() => initialUser = user));
     jwtTokenStream.listen((_) {});
     Future.delayed(
@@ -72,7 +74,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Agri Adiutor',
+      title: 'Grower',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
@@ -90,13 +92,14 @@ class _MyAppState extends State<MyApp> {
                 color: Colors.transparent,
                 child: Image.asset(
                   'assets/images/bg_3.jpg',
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 ),
               ),
             )
           : currentUser!.loggedIn
               ? NavBarPage()
-              : LoginPage2Widget(),
+              : SplashScreenWidget(),
+      navigatorObservers: [routeObserver],
     );
   }
 }
@@ -126,12 +129,13 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'MyProfile': MyProfileWidget(),
-      'Camera': CameraWidget(),
       'plantdetails': PlantdetailsWidget(),
+      'Camera': CameraWidget(),
       'ardureads': ArdureadsWidget(),
+      'MyProfile': MyProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
+
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
       bottomNavigationBar: BottomNavigationBar(
@@ -140,7 +144,7 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: FlutterFlowTheme.of(context).primary,
+        backgroundColor: FlutterFlowTheme.of(context).tertiary400,
         selectedItemColor: FlutterFlowTheme.of(context).black600,
         unselectedItemColor: FlutterFlowTheme.of(context).primaryBlack,
         showSelectedLabels: true,
@@ -149,14 +153,14 @@ class _NavBarPageState extends State<NavBarPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person_outline,
+              Icons.home_outlined,
               size: 24.0,
             ),
             activeIcon: Icon(
-              Icons.person_sharp,
+              Icons.home,
               size: 24.0,
             ),
-            label: 'You',
+            label: 'Home',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -173,18 +177,6 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.home,
-              size: 24.0,
-            ),
-            label: 'Home',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.dashboard_outlined,
               size: 25.0,
             ),
@@ -193,6 +185,18 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 25.0,
             ),
             label: 'Reads',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outline,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.person_sharp,
+              size: 24.0,
+            ),
+            label: 'You',
             tooltip: '',
           )
         ],

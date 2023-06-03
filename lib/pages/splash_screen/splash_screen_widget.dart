@@ -2,8 +2,8 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/login_page/login_page_widget.dart';
-import '/register/register_widget.dart';
+import '/pages/login_page/login_page_widget.dart';
+import '/pages/register/register_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -130,14 +130,14 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBlack,
+      backgroundColor: FlutterFlowTheme.of(context).white,
       body: Container(
         width: MediaQuery.of(context).size.width * 1.0,
         height: MediaQuery.of(context).size.height * 1.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBlack,
           image: DecorationImage(
-            fit: BoxFit.cover,
+            fit: BoxFit.none,
             image: Image.asset(
               'assets/images/bg_3.jpg',
             ).image,
@@ -159,14 +159,18 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -0.4),
-                      child: Image.asset(
-                        'assets/images/Agri_Adiutor__in_frame_transparent.png',
-                        width: 300.0,
-                        height: 300.0,
-                        fit: BoxFit.fitHeight,
-                      ).animateOnPageLoad(
-                          animationsMap['imageOnPageLoadAnimation']!),
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 65.0),
+                        child: Image.asset(
+                          'assets/images/aa__4_-removebg-preview_(1).png',
+                          width: 300.0,
+                          height: 300.0,
+                          fit: BoxFit.fitHeight,
+                        ).animateOnPageLoad(
+                            animationsMap['imageOnPageLoadAnimation']!),
+                      ),
                     ),
                   ],
                 ),
@@ -211,10 +215,10 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          fontFamily: 'Gamja Flower',
+                                          fontFamily: 'Noto Sans',
                                           color: FlutterFlowTheme.of(context)
                                               .white,
-                                          fontSize: 25.0,
+                                          fontSize: 18.0,
                                           fontWeight: FontWeight.bold,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -223,7 +227,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                         ),
                                     elevation: 3.0,
                                     borderSide: BorderSide(
-                                      color: Colors.transparent,
+                                      color: Color(0xFFA8CF45),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
@@ -253,9 +257,9 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: 'Gamja Flower',
+                                      fontFamily: 'Noto Sans',
                                       color: FlutterFlowTheme.of(context).white,
-                                      fontSize: 25.0,
+                                      fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -264,7 +268,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                     ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(
-                                  color: Colors.transparent,
+                                  color: Color(0xFFA8CF45),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),

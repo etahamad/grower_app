@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/main.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -278,12 +279,15 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
-          return Center(
-            child: SizedBox(
-              width: 50.0,
-              height: 50.0,
-              child: CircularProgressIndicator(
-                color: Color(0xC842BEA5),
+          return Scaffold(
+            backgroundColor: FlutterFlowTheme.of(context).white,
+            body: Center(
+              child: SizedBox(
+                width: 50.0,
+                height: 50.0,
+                child: CircularProgressIndicator(
+                  color: FlutterFlowTheme.of(context).tertiary400,
+                ),
               ),
             ),
           );
@@ -303,12 +307,20 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                 borderWidth: 1.0,
                 buttonSize: 55.0,
                 icon: Icon(
-                  Icons.arrow_back_rounded,
+                  Icons.refresh,
                   color: Colors.white,
                   size: 25.0,
                 ),
                 onPressed: () async {
-                  Navigator.pop(context);
+                  await Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.topToBottom,
+                      duration: Duration(milliseconds: 300),
+                      reverseDuration: Duration(milliseconds: 300),
+                      child: NavBarPage(initialPage: 'ardureads'),
+                    ),
+                  );
                 },
               ),
               title: Align(
@@ -316,10 +328,10 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                 child: Text(
                   'Hardware Readings',
                   style: FlutterFlowTheme.of(context).displaySmall.override(
-                        fontFamily: 'Outfit',
+                        fontFamily: 'Noto Sans',
                         color: FlutterFlowTheme.of(context).white,
                         fontSize: 25.0,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.bold,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(
                             FlutterFlowTheme.of(context).displaySmallFamily),
                       ),
@@ -330,6 +342,7 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
               elevation: 2.0,
             ),
             body: SafeArea(
+              top: true,
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
@@ -342,10 +355,10 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                         'Reads',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).titleLarge.override(
-                              fontFamily: 'Outfit',
+                              fontFamily: 'Noto Sans',
                               color: Colors.black,
                               fontSize: 22.0,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.bold,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .titleLargeFamily),
@@ -430,9 +443,9 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                             style: FlutterFlowTheme.of(context)
                                                 .titleLarge
                                                 .override(
-                                                  fontFamily: 'Outfit',
+                                                  fontFamily: 'Noto Sans',
                                                   color: Colors.black,
-                                                  fontSize: 22.0,
+                                                  fontSize: 20.0,
                                                   fontWeight: FontWeight.w500,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
@@ -461,24 +474,21 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                     .toString(),
                                                 '0',
                                               ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        color:
-                                                            Color(0xFF57636C),
-                                                        fontSize: 30.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                        useGoogleFonts: GoogleFonts
-                                                                .asMap()
-                                                            .containsKey(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelMediumFamily),
-                                                      ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily: 'Noto Sans',
+                                                    color: Color(0xFF57636C),
+                                                    fontSize: 25.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily),
+                                                  ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation3']!),
                                           ),
@@ -500,7 +510,9 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                   height: 50.0,
                                                   child:
                                                       CircularProgressIndicator(
-                                                    color: Color(0xC842BEA5),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .tertiary400,
                                                   ),
                                                 ),
                                               );
@@ -649,9 +661,9 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                             style: FlutterFlowTheme.of(context)
                                                 .titleLarge
                                                 .override(
-                                                  fontFamily: 'Outfit',
+                                                  fontFamily: 'Noto Sans',
                                                   color: Colors.black,
-                                                  fontSize: 22.0,
+                                                  fontSize: 20.0,
                                                   fontWeight: FontWeight.w500,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
@@ -680,24 +692,21 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                     .toString(),
                                                 '0',
                                               ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        color:
-                                                            Color(0xFF57636C),
-                                                        fontSize: 30.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                        useGoogleFonts: GoogleFonts
-                                                                .asMap()
-                                                            .containsKey(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelMediumFamily),
-                                                      ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily: 'Noto Sans',
+                                                    color: Color(0xFF57636C),
+                                                    fontSize: 25.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily),
+                                                  ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation5']!),
                                           ),
@@ -719,7 +728,9 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                   height: 50.0,
                                                   child:
                                                       CircularProgressIndicator(
-                                                    color: Color(0xC842BEA5),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .tertiary400,
                                                   ),
                                                 ),
                                               );
@@ -868,9 +879,9 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                             style: FlutterFlowTheme.of(context)
                                                 .titleLarge
                                                 .override(
-                                                  fontFamily: 'Outfit',
+                                                  fontFamily: 'Noto Sans',
                                                   color: Colors.black,
-                                                  fontSize: 22.0,
+                                                  fontSize: 20.0,
                                                   fontWeight: FontWeight.w500,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
@@ -899,24 +910,21 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                     .toString(),
                                                 '0',
                                               ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        color:
-                                                            Color(0xFF57636C),
-                                                        fontSize: 30.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                        useGoogleFonts: GoogleFonts
-                                                                .asMap()
-                                                            .containsKey(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelMediumFamily),
-                                                      ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily: 'Noto Sans',
+                                                    color: Color(0xFF57636C),
+                                                    fontSize: 25.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily),
+                                                  ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation7']!),
                                           ),
@@ -938,7 +946,9 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                                                   height: 50.0,
                                                   child:
                                                       CircularProgressIndicator(
-                                                    color: Color(0xC842BEA5),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .tertiary400,
                                                   ),
                                                 ),
                                               );

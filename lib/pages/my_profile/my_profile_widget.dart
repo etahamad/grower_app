@@ -1,13 +1,13 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/change_password/change_password_widget.dart';
-import '/edit_profile/edit_profile_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/login_page2/login_page2_widget.dart';
+import '/pages/change_password/change_password_widget.dart';
+import '/pages/edit_profile/edit_profile_widget.dart';
+import '/pages/splash_screen/splash_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -86,12 +86,15 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
-          return Center(
-            child: SizedBox(
-              width: 50.0,
-              height: 50.0,
-              child: CircularProgressIndicator(
-                color: Color(0xC842BEA5),
+          return Scaffold(
+            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+            body: Center(
+              child: SizedBox(
+                width: 50.0,
+                height: 50.0,
+                child: CircularProgressIndicator(
+                  color: FlutterFlowTheme.of(context).tertiary400,
+                ),
               ),
             ),
           );
@@ -120,7 +123,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
             title: Text(
               'Welcome',
               style: FlutterFlowTheme.of(context).displaySmall.override(
-                    fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
+                    fontFamily: 'Noto Sans',
                     color: FlutterFlowTheme.of(context).white,
                     fontSize: 25.0,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -132,6 +135,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
             elevation: 0.0,
           ),
           body: SafeArea(
+            top: true,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -162,14 +166,14 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  myProfileUsersRecord.displayName!,
+                                  myProfileUsersRecord.displayName,
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
-                                        fontFamily: 'Gamja Flower',
+                                        fontFamily: 'Noto Sans',
                                         color:
                                             FlutterFlowTheme.of(context).white,
-                                        fontSize: 25.0,
+                                        fontSize: 20.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -184,8 +188,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                         Container(
                           width: MediaQuery.of(context).size.width * 1.0,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
+                            color: FlutterFlowTheme.of(context).white,
                             boxShadow: [
                               BoxShadow(
                                 blurRadius: 5.0,
@@ -207,9 +210,9 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
-                                        fontFamily: 'Gamja Flower',
+                                        fontFamily: 'Noto Sans',
                                         color: Colors.black,
-                                        fontSize: 18.0,
+                                        fontSize: 16.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -222,9 +225,16 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  myProfileUsersRecord.email!,
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                  myProfileUsersRecord.email,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Noto Sans',
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily),
+                                      ),
                                 ),
                               ),
                               Padding(
@@ -260,9 +270,9 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Gamja Flower',
+                                                  fontFamily: 'Noto Sans',
                                                   color: Colors.black,
-                                                  fontSize: 18.0,
+                                                  fontSize: 16.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
@@ -322,9 +332,9 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Gamja Flower',
+                                                fontFamily: 'Noto Sans',
                                                 color: Colors.black,
-                                                fontSize: 18.0,
+                                                fontSize: 16.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts: GoogleFonts
                                                         .asMap()
@@ -392,7 +402,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                               1.0,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
+                                                .white,
                                           ),
                                           child: Padding(
                                             padding:
@@ -410,10 +420,9 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Gamja Flower',
+                                                        fontFamily: 'Noto Sans',
                                                         color: Colors.black,
-                                                        fontSize: 18.0,
+                                                        fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                         useGoogleFonts: GoogleFonts
@@ -667,7 +676,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              LoginPage2Widget(),
+                                              SplashScreenWidget(),
                                         ),
                                         (r) => false,
                                       );
@@ -686,11 +695,11 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleMediumFamily,
+                                            fontFamily: 'Noto Sans',
                                             color: FlutterFlowTheme.of(context)
                                                 .white,
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.bold,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
@@ -711,10 +720,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodySmallFamily,
+                                        fontFamily: 'Noto Sans',
                                         color: FlutterFlowTheme.of(context)
                                             .grayIcon,
+                                        fontSize: 12.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)

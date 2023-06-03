@@ -46,12 +46,15 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
-          return Center(
-            child: SizedBox(
-              width: 50.0,
-              height: 50.0,
-              child: CircularProgressIndicator(
-                color: Color(0xC842BEA5),
+          return Scaffold(
+            backgroundColor: FlutterFlowTheme.of(context).white,
+            body: Center(
+              child: SizedBox(
+                width: 50.0,
+                height: 50.0,
+                child: CircularProgressIndicator(
+                  color: FlutterFlowTheme.of(context).tertiary400,
+                ),
               ),
             ),
           );
@@ -69,7 +72,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).white,
           appBar: AppBar(
-            backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+            backgroundColor: FlutterFlowTheme.of(context).white,
             automaticallyImplyLeading: false,
             leading: FlutterFlowIconButton(
               borderColor: Colors.transparent,
@@ -86,13 +89,19 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
             ),
             title: Text(
               'Change Password',
-              style: FlutterFlowTheme.of(context).headlineMedium,
+              style: GoogleFonts.getFont(
+                'Noto Sans',
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 25.0,
+              ),
             ),
             actions: [],
             centerTitle: false,
             elevation: 0.0,
           ),
           body: SafeArea(
+            top: true,
             child: Form(
               key: _model.formKey,
               autovalidateMode: AutovalidateMode.always,
@@ -102,7 +111,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                   Container(
                     width: MediaQuery.of(context).size.width * 1.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: FlutterFlowTheme.of(context).white,
                       boxShadow: [
                         BoxShadow(
                           blurRadius: 4.0,
@@ -133,9 +142,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
-                                    fontFamily: 'Gamja Flower',
+                                    fontFamily: 'Noto Sans',
                                     color: Colors.black,
-                                    fontSize: 24.0,
+                                    fontSize: 16.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -151,13 +160,13 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                               controller: _model.emailTextController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Email address here...',
+                                labelText: 'Email address here',
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .bodySmall
                                     .override(
-                                      fontFamily: 'Gamja Flower',
+                                      fontFamily: 'Noto Sans',
                                       color: Colors.black,
-                                      fontSize: 18.0,
+                                      fontSize: 20.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -217,8 +226,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Gamja Flower',
+                                    fontFamily: 'Noto Sans',
                                     color: FlutterFlowTheme.of(context).white,
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -274,10 +284,10 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
-                                            fontFamily: 'Gamja Flower',
+                                            fontFamily: 'Noto Sans',
                                             color: FlutterFlowTheme.of(context)
                                                 .white,
-                                            fontSize: 25.0,
+                                            fontSize: 20.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
@@ -286,7 +296,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                           ),
                                       elevation: 3.0,
                                       borderSide: BorderSide(
-                                        color: Colors.transparent,
+                                        color: Color(0xFFA8CF45),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),

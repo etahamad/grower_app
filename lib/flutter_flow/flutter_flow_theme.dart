@@ -75,6 +75,11 @@ abstract class FlutterFlowTheme {
   late Color black600;
   late Color tertiary400;
   late Color textColor;
+  late Color night;
+  late Color jet;
+  late Color persianGreen;
+  late Color tiffanyBlue;
+  late Color snow;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -162,22 +167,22 @@ class LightModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF42BEA5);
-  late Color secondary = const Color(0xFF359F8A);
-  late Color tertiary = const Color(0xFFE86969);
-  late Color alternate = const Color(0xFF262D34);
-  late Color primaryText = const Color(0xFF1A1F24);
-  late Color secondaryText = const Color(0xFF95A1AC);
-  late Color primaryBackground = const Color(0xFFF1F4F8);
-  late Color secondaryBackground = const Color(0xFFFFFFFF);
-  late Color accent1 = const Color(0xFF616161);
-  late Color accent2 = const Color(0xFF757575);
-  late Color accent3 = const Color(0xFFE0E0E0);
-  late Color accent4 = const Color(0xFFEEEEEE);
-  late Color success = const Color(0xFF04A24C);
-  late Color warning = const Color(0xFFFCDC0C);
-  late Color error = const Color(0xFFE21C3D);
-  late Color info = const Color(0xFF1C4494);
+  late Color primary = const Color(0xFF2A9D8F);
+  late Color secondary = const Color(0xFFE9C46A);
+  late Color tertiary = const Color(0xFFF4A261);
+  late Color alternate = const Color(0xFF264653);
+  late Color primaryText = const Color(0xFF1D3557);
+  late Color secondaryText = const Color(0xFF457B9D);
+  late Color primaryBackground = const Color(0xFFFFFFFF);
+  late Color secondaryBackground = const Color(0xFFF1FAEE);
+  late Color accent1 = const Color(0xFFFEDC5E);
+  late Color accent2 = const Color(0xFFF9C74F);
+  late Color accent3 = const Color(0xFFF08A5D);
+  late Color accent4 = const Color(0xFFE55934);
+  late Color success = const Color(0xFF6AB04C);
+  late Color warning = const Color(0xFFF9C74F);
+  late Color error = const Color(0xFFEB5757);
+  late Color info = const Color(0xFF55BCC9);
 
   late Color white = Color(0xFFFFFFFF);
   late Color lineColor = Color(0xFFDBE2E7);
@@ -191,6 +196,11 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color black600 = Color(0xFF090F13);
   late Color tertiary400 = Color(0xFF39D2C0);
   late Color textColor = Color(0xFF1E2429);
+  late Color night = Color(0xFF131515);
+  late Color jet = Color(0xFF2B2C28);
+  late Color persianGreen = Color(0xFF339989);
+  late Color tiffanyBlue = Color(0xFF7DE2D1);
+  late Color snow = Color(0xFFFFFAFB);
 }
 
 abstract class Typography {
@@ -315,9 +325,12 @@ class MobileTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 11.0,
       );
-  String get bodyLargeFamily => '';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 16.0,
       );
   String get bodyMediumFamily => 'Outfit';
   TextStyle get bodyMedium => GoogleFonts.getFont(
@@ -424,9 +437,12 @@ class TabletTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 11.0,
       );
-  String get bodyLargeFamily => '';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 16.0,
       );
   String get bodyMediumFamily => 'Outfit';
   TextStyle get bodyMedium => GoogleFonts.getFont(
@@ -533,9 +549,12 @@ class DesktopTypography extends Typography {
         fontWeight: FontWeight.w500,
         fontSize: 11.0,
       );
-  String get bodyLargeFamily => '';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Roboto',
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 16.0,
       );
   String get bodyMediumFamily => 'Outfit';
   TextStyle get bodyMedium => GoogleFonts.getFont(
@@ -561,22 +580,22 @@ class DarkModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF42BEA5);
-  late Color secondary = const Color(0xFF359F8A);
-  late Color tertiary = const Color(0xFFE86969);
-  late Color alternate = const Color(0xFF262D34);
-  late Color primaryText = const Color(0xFFFFFFFF);
-  late Color secondaryText = const Color(0xFF95A1AC);
-  late Color primaryBackground = const Color(0xFF1A1F24);
-  late Color secondaryBackground = const Color(0xFF131619);
-  late Color accent1 = const Color(0xFFEEEEEE);
-  late Color accent2 = const Color(0xFFE0E0E0);
-  late Color accent3 = const Color(0xFF757575);
-  late Color accent4 = const Color(0xFF616161);
-  late Color success = const Color(0xFF04A24C);
-  late Color warning = const Color(0xFFFCDC0C);
-  late Color error = const Color(0xFFE21C3D);
-  late Color info = const Color(0xFF1C4494);
+  late Color primary = const Color(0xFF21867A);
+  late Color secondary = const Color(0xFFDDB86A);
+  late Color tertiary = const Color(0xFFE76F51);
+  late Color alternate = const Color(0xFF1A3C40);
+  late Color primaryText = const Color(0xFFE5E5E5);
+  late Color secondaryText = const Color(0xFFA7A7A7);
+  late Color primaryBackground = const Color(0xFF1A1A1A);
+  late Color secondaryBackground = const Color(0xFF4A4A4A);
+  late Color accent1 = const Color(0xFFFEDC5E);
+  late Color accent2 = const Color(0xFFF9C74F);
+  late Color accent3 = const Color(0xFFF08A5D);
+  late Color accent4 = const Color(0xFFE55934);
+  late Color success = const Color(0xFF6AB04C);
+  late Color warning = const Color(0xFFF9C74F);
+  late Color error = const Color(0xFFEB5757);
+  late Color info = const Color(0xFF55BCC9);
 
   late Color white = Color(0xFFFFFFFF);
   late Color lineColor = Color(0xFF262D34);
@@ -590,6 +609,11 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color black600 = Color(0xFF090F13);
   late Color tertiary400 = Color(0xFF39D2C0);
   late Color textColor = Color(0xFF1E2429);
+  late Color night = Color(0xFF131515);
+  late Color jet = Color(0xFF2B2C28);
+  late Color persianGreen = Color(0xFF339989);
+  late Color tiffanyBlue = Color(0xFF7DE2D1);
+  late Color snow = Color(0xFFFFFAFB);
 }
 
 extension TextStyleHelper on TextStyle {

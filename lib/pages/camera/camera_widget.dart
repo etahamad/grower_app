@@ -66,8 +66,9 @@ class _CameraWidgetState extends State<CameraWidget> {
           child: Text(
             'Camera',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
+                  fontFamily: 'Noto Sans',
                   color: FlutterFlowTheme.of(context).white,
+                  fontSize: 25.0,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
                 ),
@@ -78,6 +79,7 @@ class _CameraWidgetState extends State<CameraWidget> {
         elevation: 2.0,
       ),
       body: SafeArea(
+        top: true,
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -94,9 +96,9 @@ class _CameraWidgetState extends State<CameraWidget> {
                         'Upload image',
                         style:
                             FlutterFlowTheme.of(context).displaySmall.override(
-                                  fontFamily: 'Gamja Flower',
+                                  fontFamily: 'Noto Sans',
                                   color: Colors.black,
-                                  fontSize: 30.0,
+                                  fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -231,9 +233,9 @@ class _CameraWidgetState extends State<CameraWidget> {
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).tertiary400,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Gamja Flower',
+                        fontFamily: 'Noto Sans',
                         color: FlutterFlowTheme.of(context).white,
-                        fontSize: 25.0,
+                        fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(
                             FlutterFlowTheme.of(context).titleSmallFamily),
@@ -250,7 +252,7 @@ class _CameraWidgetState extends State<CameraWidget> {
                 width: 376.0,
                 height: 100.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: FlutterFlowTheme.of(context).white,
                 ),
                 child: Padding(
                   padding:
@@ -262,9 +264,9 @@ class _CameraWidgetState extends State<CameraWidget> {
                     ).toString(),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Gamja Flower',
+                          fontFamily: 'Noto Sans',
                           color: Colors.black,
-                          fontSize: 30.0,
+                          fontSize: 22.0,
                           fontWeight: FontWeight.bold,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodyMediumFamily),

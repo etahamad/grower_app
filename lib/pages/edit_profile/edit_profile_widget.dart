@@ -52,12 +52,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
-          return Center(
-            child: SizedBox(
-              width: 50.0,
-              height: 50.0,
-              child: CircularProgressIndicator(
-                color: Color(0xC842BEA5),
+          return Scaffold(
+            backgroundColor: FlutterFlowTheme.of(context).white,
+            body: Center(
+              child: SizedBox(
+                width: 50.0,
+                height: 50.0,
+                child: CircularProgressIndicator(
+                  color: FlutterFlowTheme.of(context).tertiary400,
+                ),
               ),
             ),
           );
@@ -92,8 +95,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
             title: Text(
               'Edit Profile',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    fontFamily: 'Gamja Flower',
-                    fontSize: 35.0,
+                    fontFamily: 'Noto Sans',
+                    color: Colors.black,
+                    fontSize: 25.0,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
                         FlutterFlowTheme.of(context).headlineMediumFamily),
                   ),
@@ -103,6 +107,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
             elevation: 0.0,
           ),
           body: SafeArea(
+            top: true,
             child: Form(
               key: _model.formKey,
               autovalidateMode: AutovalidateMode.disabled,
@@ -112,7 +117,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                   Container(
                     width: MediaQuery.of(context).size.width * 1.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: FlutterFlowTheme.of(context).white,
                       boxShadow: [
                         BoxShadow(
                           blurRadius: 5.0,
@@ -140,7 +145,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 width: 50.0,
                                 height: 50.0,
                                 child: CircularProgressIndicator(
-                                  color: Color(0xC842BEA5),
+                                  color:
+                                      FlutterFlowTheme.of(context).tertiary400,
                                 ),
                               ),
                             );
@@ -159,9 +165,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
-                                        fontFamily: 'Gamja Flower',
+                                        fontFamily: 'Noto Sans',
                                         color: Colors.black,
-                                        fontSize: 20.0,
+                                        fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -184,9 +190,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          fontFamily: 'Gamja Flower',
+                                          fontFamily: 'Noto Sans',
                                           color: Colors.black,
-                                          fontSize: 25.0,
+                                          fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -210,28 +216,28 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0xFFA8CF45),
-                                        width: 1.0,
+                                        width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
-                                        width: 1.0,
+                                        width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
-                                        width: 1.0,
+                                        width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
-                                        width: 1.0,
+                                        width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
@@ -246,10 +252,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Gamja Flower',
+                                        fontFamily: 'Noto Sans',
                                         color:
                                             FlutterFlowTheme.of(context).white,
-                                        fontSize: 18.0,
+                                        fontSize: 14.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -274,7 +280,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          fontFamily: 'Gamja Flower',
+                                          fontFamily: 'Noto Sans',
                                           color: Colors.black,
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
@@ -287,12 +293,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
+                                          fontFamily: 'Noto Sans',
                                           color: FlutterFlowTheme.of(context)
                                               .white,
-                                          fontSize: 18.0,
+                                          fontSize: 14.0,
                                           fontWeight: FontWeight.bold,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -302,28 +306,28 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0xFFA8CF45),
-                                        width: 1.0,
+                                        width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
-                                        width: 1.0,
+                                        width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
-                                        width: 1.0,
+                                        width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
-                                        width: 1.0,
+                                        width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
@@ -392,11 +396,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                   context)
                                               .titleMedium
                                               .override(
-                                                fontFamily: 'Gamja Flower',
+                                                fontFamily: 'Noto Sans',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .white,
-                                                fontSize: 25.0,
+                                                fontSize: 20.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts: GoogleFonts
                                                         .asMap()
@@ -405,10 +409,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                                 context)
                                                             .titleMediumFamily),
                                               ),
-                                          elevation: 3.0,
+                                          elevation: 4.0,
                                           borderSide: BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1.0,
+                                            color: Color(0xFFA8CF45),
+                                            width: 2.0,
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(8.0),
