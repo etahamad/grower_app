@@ -126,8 +126,9 @@ class _CameraWidgetState extends State<CameraWidget> {
                           final selectedMedia =
                               await selectMediaWithSourceBottomSheet(
                             context: context,
+                            imageQuality: 100,
                             allowPhoto: true,
-                            pickerFontFamily: 'Gamja Flower',
+                            pickerFontFamily: 'Roboto',
                           );
                           if (selectedMedia != null &&
                               selectedMedia.every((m) =>
@@ -136,6 +137,11 @@ class _CameraWidgetState extends State<CameraWidget> {
                             var selectedUploadedFiles = <FFUploadedFile>[];
                             var downloadUrls = <String>[];
                             try {
+                              showUploadMessage(
+                                context,
+                                'Uploading file...',
+                                showLoading: true,
+                              );
                               selectedUploadedFiles = selectedMedia
                                   .map((m) => FFUploadedFile(
                                         name: m.storagePath.split('/').last,
@@ -156,6 +162,8 @@ class _CameraWidgetState extends State<CameraWidget> {
                                   .map((u) => u!)
                                   .toList();
                             } finally {
+                              ScaffoldMessenger.of(context)
+                                  .hideCurrentSnackBar();
                               _model.isDataUploading = false;
                             }
                             if (selectedUploadedFiles.length ==
@@ -166,8 +174,11 @@ class _CameraWidgetState extends State<CameraWidget> {
                                     selectedUploadedFiles.first;
                                 _model.uploadedFileUrl = downloadUrls.first;
                               });
+                              showUploadMessage(context, 'Success!');
                             } else {
                               setState(() {});
+                              showUploadMessage(
+                                  context, 'Failed to upload data');
                               return;
                             }
                           }
