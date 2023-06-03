@@ -80,6 +80,28 @@ class ListPlantInfoCall {
       );
 }
 
+class ArduinoAICall {
+  static Future<ApiCallResponse> call() {
+    return ApiManager.instance.makeApiCall(
+      callName: 'arduinoAI',
+      apiUrl:
+          'https://5000-etahamad-plantapi-rat9ghygbly.ws-eu98.gitpod.io/api/data',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  static dynamic arduinoAIRes(dynamic response) => getJsonField(
+        response,
+        r'''$.data[0]''',
+      );
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;
