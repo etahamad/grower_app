@@ -84,8 +84,7 @@ class ArduinoAICall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
       callName: 'arduinoAI',
-      apiUrl:
-          'https://5000-etahamad-plantapi-rat9ghygbly.ws-eu98.gitpod.io/api/data',
+      apiUrl: 'http://81.0.220.243:5000/api/data',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
