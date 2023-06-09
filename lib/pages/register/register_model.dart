@@ -41,6 +41,8 @@ class RegisterModel extends FlutterFlowModel {
     signupPasswordConfirmController?.dispose();
   }
 
+  /// Action blocks are added here.
+
   /// Additional helper methods are added here.
 
 }

@@ -79,8 +79,7 @@ class ArduinoAICall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
       callName: 'arduinoAI',
-      apiUrl: 'https://arduinotoapi.vercel.app/'
-          '',
+      apiUrl: 'https://arduinotoapi.vercel.app/',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -94,6 +93,10 @@ class ArduinoAICall {
   static dynamic arduinoAIRes(dynamic response) => getJsonField(
         response,
         r'''$.data[0]''',
+      );
+  static dynamic arduinoAIImage(dynamic response) => getJsonField(
+        response,
+        r'''$.data[2]''',
       );
 }
 
@@ -122,11 +125,11 @@ String _serializeList(List? list) {
   }
 }
 
-String _serializeJson(dynamic jsonVar) {
-  jsonVar ??= {};
+String _serializeJson(dynamic jsonVar, [bool isList = false]) {
+  jsonVar ??= (isList ? [] : {});
   try {
     return json.encode(jsonVar);
   } catch (_) {
-    return '{}';
+    return isList ? '[]' : '{}';
   }
 }

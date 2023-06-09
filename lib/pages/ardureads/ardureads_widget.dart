@@ -26,7 +26,6 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
   late ArdureadsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   final animationsMap = {
     'textOnPageLoadAnimation1': AnimationInfo(
@@ -328,7 +327,6 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
@@ -354,7 +352,7 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
         }
         final ardureadsListPlantInfoResponse = snapshot.data!;
         return GestureDetector(
-          onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+          onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).white,

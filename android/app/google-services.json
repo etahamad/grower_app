@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "1044237359353",
+    "firebase_url": "https://agri-adiutor-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "agri-adiutor",
     "storage_bucket": "agri-adiutor.appspot.com"
   },
