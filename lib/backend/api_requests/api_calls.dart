@@ -1,12 +1,7 @@
 import 'dart:convert';
-import 'dart:typed_data';
-
 import '../../flutter_flow/flutter_flow_util.dart';
-
 import 'api_manager.dart';
-
 export 'api_manager.dart' show ApiCallResponse;
-
 const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class PlantImageAPICall {
@@ -42,7 +37,7 @@ class ListPlantInfoCall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
       callName: 'list plant info',
-      apiUrl: 'http://81.0.220.243:8000/api/list-plants-info',
+      apiUrl: 'https://etahamadtemp.pythonanywhere.com/api/list-plants-info',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -84,7 +79,8 @@ class ArduinoAICall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
       callName: 'arduinoAI',
-      apiUrl: 'http://81.0.220.243:5000/api/data',
+      apiUrl: 'https://arduinotoapi.vercel.app/'
+          '',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
