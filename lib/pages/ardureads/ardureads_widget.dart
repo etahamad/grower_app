@@ -1,3 +1,4 @@
+import '/ardcamera/ardcamera_widget.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -1121,167 +1122,189 @@ class _ArdureadsWidgetState extends State<ArdureadsWidget>
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        12.0, 8.0, 16.0, 4.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  4.0, 12.0, 12.0, 12.0),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Card(
-                                                clipBehavior:
-                                                    Clip.antiAliasWithSaveLayer,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .tertiary400,
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          40.0),
-                                                ),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(12.0, 12.0,
-                                                          12.0, 12.0),
-                                                  child: Icon(
-                                                    Icons.image_search,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .white,
-                                                    size: 24.0,
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => ArdcameraWidget(),
+                                    ),
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 8.0, 16.0, 4.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    4.0, 12.0, 12.0, 12.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Card(
+                                                  clipBehavior: Clip
+                                                      .antiAliasWithSaveLayer,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .tertiary400,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            40.0),
+                                                  ),
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                12.0,
+                                                                12.0,
+                                                                12.0,
+                                                                12.0),
+                                                    child: Icon(
+                                                      Icons.image_search,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .white,
+                                                      size: 24.0,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                              Text(
-                                                'Detection',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleLarge
-                                                        .override(
-                                                          fontFamily:
-                                                              'Noto Sans',
-                                                          color: Colors.black,
-                                                          fontSize: 20.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleLargeFamily),
-                                                        ),
-                                              ).animateOnPageLoad(animationsMap[
-                                                  'textOnPageLoadAnimation8']!),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 4.0, 0.0, 0.0),
-                                                child: Text(
-                                                  valueOrDefault<String>(
-                                                    ArduinoAICall.arduinoAIRes(
-                                                      containerArduinoAIResponse
-                                                          .jsonBody,
-                                                    ).toString(),
-                                                    'null',
-                                                  ),
+                                                Text(
+                                                  'Detection',
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .labelMedium
+                                                      .titleLarge
                                                       .override(
                                                         fontFamily: 'Noto Sans',
-                                                        color:
-                                                            Color(0xFF57636C),
-                                                        fontSize: 25.0,
+                                                        color: Colors.black,
+                                                        fontSize: 20.0,
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                            FontWeight.w500,
                                                         useGoogleFonts: GoogleFonts
                                                                 .asMap()
                                                             .containsKey(
                                                                 FlutterFlowTheme.of(
                                                                         context)
-                                                                    .labelMediumFamily),
+                                                                    .titleLargeFamily),
                                                       ),
                                                 ).animateOnPageLoad(animationsMap[
-                                                    'textOnPageLoadAnimation9']!),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        if (ArduinoAICall.arduinoAIRes(
-                                              containerArduinoAIResponse
-                                                  .jsonBody,
-                                            ).toString() ==
-                                            'Not a plant')
-                                          Card(
-                                            clipBehavior:
-                                                Clip.antiAliasWithSaveLayer,
-                                            color: FlutterFlowTheme.of(context)
-                                                .tertiary400,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(40.0),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      12.0, 12.0, 12.0, 12.0),
-                                              child: Icon(
-                                                Icons.warning,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .white,
-                                                size: 24.0,
-                                              ),
-                                            ),
-                                          ),
-                                        if (ArduinoAICall.arduinoAIRes(
-                                              containerArduinoAIResponse
-                                                  .jsonBody,
-                                            ).toString() !=
-                                            'Not a plant')
-                                          Card(
-                                            clipBehavior:
-                                                Clip.antiAliasWithSaveLayer,
-                                            color: FlutterFlowTheme.of(context)
-                                                .tertiary400,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(40.0),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      12.0, 12.0, 12.0, 12.0),
-                                              child: Icon(
-                                                Icons.check,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .white,
-                                                size: 24.0,
-                                              ),
+                                                    'textOnPageLoadAnimation8']!),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 4.0, 0.0, 0.0),
+                                                  child: Text(
+                                                    valueOrDefault<String>(
+                                                      ArduinoAICall
+                                                          .arduinoAIRes(
+                                                        containerArduinoAIResponse
+                                                            .jsonBody,
+                                                      ).toString(),
+                                                      'null',
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Noto Sans',
+                                                          color:
+                                                              Color(0xFF57636C),
+                                                          fontSize: 25.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily),
+                                                        ),
+                                                  ).animateOnPageLoad(animationsMap[
+                                                      'textOnPageLoadAnimation9']!),
+                                                ),
+                                              ],
                                             ),
                                           ),
-                                      ],
+                                          if (ArduinoAICall.arduinoAIRes(
+                                                containerArduinoAIResponse
+                                                    .jsonBody,
+                                              ).toString() ==
+                                              'Not a plant')
+                                            Card(
+                                              clipBehavior:
+                                                  Clip.antiAliasWithSaveLayer,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiary400,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(40.0),
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        12.0, 12.0, 12.0, 12.0),
+                                                child: Icon(
+                                                  Icons.warning,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .white,
+                                                  size: 24.0,
+                                                ),
+                                              ),
+                                            ),
+                                          if (ArduinoAICall.arduinoAIRes(
+                                                containerArduinoAIResponse
+                                                    .jsonBody,
+                                              ).toString() !=
+                                              'Not a plant')
+                                            Card(
+                                              clipBehavior:
+                                                  Clip.antiAliasWithSaveLayer,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiary400,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(40.0),
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        12.0, 12.0, 12.0, 12.0),
+                                                child: Icon(
+                                                  Icons.check,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .white,
+                                                  size: 24.0,
+                                                ),
+                                              ),
+                                            ),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ).animateOnPageLoad(
