@@ -9,3 +9,4 @@ export '/pages/change_password/change_password_widget.dart'
 export '/pages/login_page/login_page_widget.dart' show LoginPageWidget;
 export '/pages/plantdetails/plantdetails_widget.dart' show PlantdetailsWidget;
 export '/pages/ardureads/ardureads_widget.dart' show ArdureadsWidget;
+export '/ardcamera/ardcamera_widget.dart' show ArdcameraWidget;

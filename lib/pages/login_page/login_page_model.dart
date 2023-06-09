@@ -30,6 +30,8 @@ class LoginPageModel extends FlutterFlowModel {
     loginPasswordController?.dispose();
   }
 
+  /// Action blocks are added here.
+
   /// Additional helper methods are added here.
 
 }
