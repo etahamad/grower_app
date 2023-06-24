@@ -79,7 +79,7 @@ class ArduinoAICall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
       callName: 'arduinoAI',
-      apiUrl: 'https://arduinotoapi.vercel.app/',
+      apiUrl: 'https://etahamad-flask.hf.space/',
       callType: ApiCallType.GET,
       headers: {},
       params: {},

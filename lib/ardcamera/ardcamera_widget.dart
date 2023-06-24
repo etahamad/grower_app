@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'dart:convert';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -16,6 +18,7 @@ class ArdcameraWidget extends StatefulWidget {
 
 class _ArdcameraWidgetState extends State<ArdcameraWidget> {
   late ArdcameraModel _model;
+  late Timer _timer;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -23,11 +26,20 @@ class _ArdcameraWidgetState extends State<ArdcameraWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ArdcameraModel());
+
+    // Start the timer to refresh every 5 seconds
+    _timer = Timer.periodic(Duration(seconds: 10), (Timer timer) {
+      // Call the API again to refresh the image
+      setState(() {});
+    });
   }
 
   @override
   void dispose() {
     _model.dispose();
+
+    // Cancel the timer to avoid memory leaks
+    _timer.cancel();
 
     super.dispose();
   }
@@ -53,6 +65,12 @@ class _ArdcameraWidgetState extends State<ArdcameraWidget> {
           );
         }
         final ardcameraArduinoAIResponse = snapshot.data!;
+
+        // Remove the prefix before decoding the base64 image
+        final base64Image = ArduinoAICall.arduinoAIImage(ardcameraArduinoAIResponse.jsonBody);
+        final imageString = base64Image.replaceFirst('data:image/png;base64,', '');
+        final decodedImage = base64Decode(imageString);
+
         return GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
           child: Scaffold(
@@ -64,13 +82,13 @@ class _ArdcameraWidgetState extends State<ArdcameraWidget> {
               title: Text(
                 'Arduino Camera',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily:
-                          FlutterFlowTheme.of(context).headlineMediumFamily,
-                      color: Colors.white,
-                      fontSize: 22.0,
-                      useGoogleFonts: GoogleFonts.asMap().containsKey(
-                          FlutterFlowTheme.of(context).headlineMediumFamily),
-                    ),
+                  fontFamily:
+                  FlutterFlowTheme.of(context).headlineMediumFamily,
+                  color: Colors.white,
+                  fontSize: 22.0,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).headlineMediumFamily),
+                ),
               ),
               actions: [],
               centerTitle: false,
@@ -83,10 +101,8 @@ class _ArdcameraWidgetState extends State<ArdcameraWidget> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.network(
-                      ArduinoAICall.arduinoAIImage(
-                        ardcameraArduinoAIResponse.jsonBody,
-                      ),
+                    child: Image.memory(
+                      decodedImage,
                       width: 361.0,
                       height: 200.0,
                       fit: BoxFit.fill,
@@ -97,12 +113,12 @@ class _ArdcameraWidgetState extends State<ArdcameraWidget> {
                       ardcameraArduinoAIResponse.jsonBody,
                     ).toString(),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).bodyMediumFamily,
-                          fontSize: 20.0,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyMediumFamily),
-                        ),
+                      fontFamily:
+                      FlutterFlowTheme.of(context).bodyMediumFamily,
+                      fontSize: 20.0,
+                      useGoogleFonts: GoogleFonts.asMap()
+                          .containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                    ),
                   ),
                 ],
               ),

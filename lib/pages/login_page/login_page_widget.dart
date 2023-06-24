@@ -333,7 +333,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   Align(
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
-                                      'have an account ? ',
+                                      'Do not have an account?',
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
